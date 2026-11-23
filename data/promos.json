@@ -1,0 +1,108 @@
+{
+  "_readme": "Promo copy and which tracker column each promo reads its 'Yes' shops from. 'column' is matched against the column header text on that sheet (start of the header, ignoring spaces/line breaks). Wording comes from the Q4 Promotions tab — don't invent new copy.",
+  "brand": {
+    "name": "Connected",
+    "kicker": "Connected Cannabis Co. · California retail deals",
+    "logo": "logos/connected.png",
+    "findProducts": "https://connectedcannabisco.com/pages/find-products",
+    "timeZone": "America/Los_Angeles"
+  },
+  "lede": "Connected deals running at California dispensaries and delivery services. Pick your shop to see what it's running, then head there to shop.",
+  "finePrint": "Deals are run by each retailer and may vary by location. While supplies last. Prices, dates and participation set by the retailer — check your shop's menu before you go. Adults 21+ with valid ID.",
+  "months": {
+    "2026-11": {
+      "title": "November",
+      "dated": [
+        {
+          "id": "gwbf",
+          "sheet": "Q4 Holiday Promo Tracker",
+          "column": "11/25-11/27",
+          "name": "Green Wednesday → Black Friday",
+          "short": "Green Wed → Black Fri",
+          "pct": "50%",
+          "what": "off all Connected products",
+          "from": 25,
+          "to": 27,
+          "color": "#1A98CE",
+          "feature": true
+        }
+      ],
+      "weekly": [
+        {
+          "id": "cold",
+          "sheet": "Q4 Weekly Promo Tracker",
+          "column": "COLD CHAIN",
+          "pct": "40%",
+          "what": "off Cold Chain vapes",
+          "freq": "2–3 days a week",
+          "label": "Cold Chain"
+        },
+        {
+          "id": "flower",
+          "sheet": "Q4 Weekly Promo Tracker",
+          "column": "AL/CC FLOWER: (OCT - NOV)",
+          "pct": "30%",
+          "what": "off 3.5g & 10g flower",
+          "freq": "1 day a week",
+          "label": "Flower"
+        },
+        {
+          "id": "5pk",
+          "sheet": "Q4 Weekly Promo Tracker",
+          "column": "CC 5PK PREROLL (OCT - NOV)",
+          "pct": "30%",
+          "what": "off 5 Pack Pre-Rolls",
+          "freq": "1 day a week",
+          "label": "5 Packs"
+        }
+      ]
+    },
+    "2026-12": {
+      "title": "December",
+      "dated": [
+        {
+          "id": "nye",
+          "sheet": "Q4 Holiday Promo Tracker",
+          "column": "12/31 (NYE)",
+          "name": "New Year's Eve",
+          "short": "New Year's Eve",
+          "pct": "50%",
+          "what": "off 3.5g & 10g flower and Cold Chain vapes",
+          "from": 31,
+          "to": 31,
+          "color": "#1A98CE",
+          "feature": true
+        }
+      ],
+      "weekly": [
+        {
+          "id": "cold",
+          "sheet": "Q4 Weekly Promo Tracker",
+          "column": "COLD CHAIN",
+          "pct": "40%",
+          "what": "off Cold Chain vapes",
+          "freq": "2–3 days a week",
+          "label": "Cold Chain"
+        },
+        {
+          "id": "flower",
+          "sheet": "Q4 Weekly Promo Tracker",
+          "column": "AL/CC FLOWER: (DEC)",
+          "pct": "40%",
+          "what": "off 3.5g & 10g flower",
+          "freq": "1 day a week",
+          "label": "Flower"
+        },
+        {
+          "id": "5pk",
+          "sheet": "Q4 Weekly Promo Tracker",
+          "column": "CC 5PK PREROLL (DEC)",
+          "pct": "40%",
+          "what": "off 5 Pack Pre-Rolls",
+          "freq": "1 day a week",
+          "label": "5 Packs"
+        }
+      ]
+    }
+  }
+}
