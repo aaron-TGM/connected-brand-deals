@@ -1,4 +1,4 @@
-/* Connected deals calendar — embed.js
+/* Connected deals calendar - embed.js
    Put these two lines on any page (Shopify: Custom Liquid section):
      <div id="cc-deals"></div>
      <script src="https://aaron-tgm.github.io/connected-brand-deals/embed.js" defer></script>
@@ -23,7 +23,8 @@
 #cc-deals{--fh:"Jost",sans-serif;--fb:"Figtree","Helvetica Neue",Arial,sans-serif;--on-acc:#fff;--hero:#0C2A38;--bg:#151515;--bg-2:#1E1E1E;--bg-3:#262626;--line:#2E2E2E;--line-2:#444;--tx:#FFFFFF;--tx-2:#C9C9C9;--tx-3:#8E8E8E;--acc:#1A98CE;--acc-2:#5FC0EA;--ink:#0E0E0E;--c:var(--acc);background:var(--bg);color:var(--tx);font-family:var(--fb);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:36px 20px 56px;box-sizing:border-box;text-align:left}\
 #cc-deals *,#cc-deals *::before,#cc-deals *::after{box-sizing:border-box}\
 #cc-deals button,#cc-deals input{font:inherit;color:inherit;margin:0;letter-spacing:normal;text-transform:none;box-shadow:none;border-radius:0}\
-#cc-deals button{cursor:pointer;background:none;border:0;padding:0;line-height:inherit}\
+#cc-deals button{cursor:pointer;background:none;border:0;padding:0;line-height:inherit;height:auto;min-height:0;max-height:none;vertical-align:baseline;white-space:normal;text-align:left;font-weight:inherit;text-decoration:none;align-items:normal;justify-content:normal;flex-wrap:nowrap;min-width:0;max-width:none;opacity:1;transform:none;float:none}\
+#cc-deals input{height:auto;min-height:0;line-height:normal;box-sizing:border-box}\
 #cc-deals a{color:inherit}#cc-deals :focus-visible{outline:2px solid var(--acc-2);outline-offset:2px}\
 #cc-deals h2,#cc-deals h3,#cc-deals h4,#cc-deals p{margin:0;padding:0;color:inherit;letter-spacing:normal;text-transform:none;font-weight:inherit}\
 #cc-deals .in{max-width:1180px;margin:0 auto}\
@@ -160,7 +161,7 @@
 #cc-deals .shop .acts{display:flex;gap:5px}\
 #cc-deals .shop .acts a,#cc-deals .shop .acts button{font-size:11.5px;padding:8px 10px}\
 #cc-deals .shop.me{border-color:var(--acc)}\
-#cc-deals .moreb{width:100%;border:1px dashed var(--line-2);padding:10px;font-size:13px;font-weight:600;color:var(--acc-2)}\
+#cc-deals .moreb{width:100%;text-align:center;border:1px dashed var(--line-2);padding:10px;font-size:13px;font-weight:600;color:var(--acc-2)}\
 #cc-deals .moreb:hover{border-color:var(--acc-2)}\
 #cc-deals .md .fine,#cc-deals .foot{font-size:11.5px;color:var(--tx-3);line-height:1.5}\
 #cc-deals .foot{margin-top:22px;display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;align-items:center}\
@@ -234,10 +235,10 @@
     var count = function (id) { return SHOPS.filter(function (s) { return has(s, id); }).length; };
     var datedOn = function (day) { var S = shop(); return DATED.filter(function (p) { return day >= p.from && day <= p.to && (!S || has(S, p.id)); }); };
     var weeklyFor = function () { var S = shop(); return WEEKLY.filter(function (w) { return !S || has(S, w.id); }); };
-    var range = function (p) { return p.from === p.to ? M + '/' + p.from : M + '/' + p.from + '–' + M + '/' + p.to; };
+    var range = function (p) { return p.from === p.to ? M + '/' + p.from : M + '/' + p.from + '\u2013' + M + '/' + p.to; };
     var linkOf = function (s) { return s.u || FALLBACK; };
     var mapsOf = function (s) { return s.a ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.n + ', ' + s.a) : null; };
-    var where = function (s) { return s.a ? s.a : (s.dl ? 'Delivery' + (s.c ? ' · ' + s.c : '') : (s.c || 'California')); };
+    var where = function (s) { return s.a ? s.a : (s.dl ? 'Delivery' + (s.c ? ' \u00b7 ' + s.c : '') : (s.c || 'California')); };
     var km = function (s) {
       if (!userPos || s.lat == null) return null;
       var r = Math.PI / 180, a = Math.sin((s.lat - userPos.lat) * r / 2), b = Math.sin((s.lng - userPos.lng) * r / 2);
@@ -250,13 +251,13 @@
         return a.n.localeCompare(b.n);
       });
     };
-    var norm = function (s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim(); };
+    var norm = function (s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim(); };
     var match = function (s, q) { if (!q) return true; var hay = norm(s.n + ' ' + (s.c || '') + ' ' + (s.a || '') + (s.dl ? ' delivery' : '')); return norm(q).split(' ').every(function (w) { return hay.indexOf(w) !== -1; }); };
     var locate = function (btn, done) {
       if (!navigator.geolocation) { btn.textContent = 'Location unavailable'; return; }
-      var old = btn.innerHTML; btn.textContent = 'Finding you…';
+      var old = btn.innerHTML; btn.textContent = 'Finding you\u2026';
       navigator.geolocation.getCurrentPosition(function (p) { userPos = { lat: p.coords.latitude, lng: p.coords.longitude }; btn.innerHTML = old; done(); },
-        function () { btn.innerHTML = old; btn.blur(); alert('We couldn’t get your location. Search by shop name or city instead.'); }, { timeout: 10000, maximumAge: 600000 });
+        function () { btn.innerHTML = old; btn.blur(); alert('We couldn\u2019t get your location. Search by shop name or city instead.'); }, { timeout: 10000, maximumAge: 600000 });
     };
 
     /* ---------- shell ---------- */
@@ -269,13 +270,13 @@
       '<div class="row2"><div class="card find" id="ccFind"></div><div class="card" id="ccWeekly"></div></div>' +
       '<div class="tools"><h3>' + esc(MONTH) + ' calendar</h3><div class="legend">' + DATED.map(function (p) { return '<span><i style="--c:' + esc(p.color || 'var(--acc)') + '"></i>' + esc(p.short || p.name) + ' ' + range(p) + '</span>'; }).join('') + (WEEKLY.length ? '<span><i class="w"></i>Weekly deals</span>' : '') + '</div></div>' +
       '<button type="button" class="earlier" id="ccEarlier"></button><div class="dows">' + ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(function (d) { return '<div>' + d + '</div>'; }).join('') + '</div><div class="grid" id="ccGrid"></div>' +
-      '<div class="foot"><span>' + esc(D.finePrint || '') + '</span><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Don’t see your shop? Find ' + esc(BN) + ' near you &rarr;</a></div></div>' +
+      '<div class="foot"><span>' + esc(D.finePrint || '') + '</span><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Don\u2019t see your shop? Find ' + esc(BN) + ' near you &rarr;</a></div></div>' +
       '<div class="ov" id="ccOv"></div><div class="md" id="ccMd" role="dialog" aria-modal="true" aria-labelledby="ccMdTitle"></div>';
     var $ = function (id) { return host.querySelector('#' + id); };
     Array.prototype.forEach.call(host.querySelectorAll('.mnav button'), function (b) {
       b.addEventListener('click', function () {
         if (b.dataset.m === D.month) return;
-        b.textContent = 'Loading…';
+        b.textContent = 'Loading\u2026';
         getMonth(b.dataset.m).then(function (N) { showPast = false; init(N); }).catch(function () { b.textContent = 'Try again'; });
       });
     });
@@ -294,7 +295,7 @@
       var label = live ? (last && P.from !== P.to ? 'Last day' : 'Live now') : (n === 1 ? 'Starts tomorrow' : 'Starts in ' + n + ' days');
       var big = live ? (last ? 'Today only' : 'Through ' + DN[dow(P.to)]) : DN[dow(P.from)] + ' ' + M + '/' + P.from;
       var c = count(P.id);
-      slot.innerHTML = '<button type="button" class="evt' + (live ? ' live' : '') + '" style="--c:' + esc(P.color || 'var(--acc)') + '"><div><div class="evt-ey">' + esc(P.name) + ' · ' + range(P) + '</div>' +
+      slot.innerHTML = '<button type="button" class="evt' + (live ? ' live' : '') + '" style="--c:' + esc(P.color || 'var(--acc)') + '"><div><div class="evt-ey">' + esc(P.name) + ' \u00b7 ' + range(P) + '</div>' +
         '<div class="evt-h"><em>' + esc(P.pct) + '</em> ' + esc(P.what) + '</div><div class="evt-s">' + (S ? 'At ' + esc(S.n) + '. Tap for details.' : 'At ' + c + ' California shops. Tap to see where.') + '</div></div>' +
         '<div class="evt-r"><div class="evt-st">' + esc(label) + '</div><div class="evt-cd">' + esc(big) + '</div><span class="evt-go">' + (S ? 'See the deal' : 'Find a shop') + ' &rarr;</span></div></button>';
       slot.firstChild.addEventListener('click', function () { openDay(live ? todayNum : P.from); });
@@ -309,7 +310,7 @@
       var el = $('ccFind'), S = shop();
       if (S) {
         var mp = mapsOf(S);
-        el.innerHTML = '<h3>Your shop</h3><div class="sub">The calendar now shows only this shop’s ' + esc(BN) + ' deals.</div>' +
+        el.innerHTML = '<h3>Your shop</h3><div class="sub">The calendar now shows only this shop\u2019s ' + esc(BN) + ' deals.</div>' +
           '<div class="picked"><div><div class="l">Shopping at</div><b>' + esc(S.n) + '</b><small>' + esc(where(S)) + '</small></div><div class="acts">' +
           '<a class="btn" href="' + esc(linkOf(S)) + '" target="_blank" rel="noopener">Visit shop ' + arrow + '</a>' + (mp ? '<a class="btn ghost" href="' + esc(mp) + '" target="_blank" rel="noopener">' + pin + 'Directions</a>' : '') + '</div></div>' +
           '<button type="button" class="chg" id="ccChange">Change shop</button>';
@@ -340,9 +341,9 @@
       var el = $('ccWeekly'), S = shop(), W = weeklyFor();
       if (!WEEKLY.length) { el.style.display = 'none'; return; }
       el.style.display = '';
-      el.innerHTML = '<h3>Every week in ' + esc(MONTH) + '</h3><div class="sub">' + (S ? (W.length ? 'Weekly ' + esc(BN) + ' deals at ' + esc(S.n) + '.' : esc(S.n) + ' isn’t running a weekly ' + esc(BN) + ' deal this month.') : 'Running at participating shops. Pick your shop to see which ones it runs.') + '</div>' +
-        '<div class="wk">' + W.map(function (w) { return '<div class="wi"><div class="pct">' + esc(w.pct) + '</div><div><b>' + esc(w.pct + ' ' + w.what) + '</b><small>' + esc(w.freq) + (S ? '' : ' · ' + count(w.id) + ' shops') + '</small></div></div>'; }).join('') +
-        (W.length ? '<div class="note">Each shop picks its own day' + (S ? ' — check ' + esc(S.n) + '’s menu for this week’s deal.' : 's — check your shop’s menu for this week’s deal.') + '</div>' : '') + '</div>';
+      el.innerHTML = '<h3>Every week in ' + esc(MONTH) + '</h3><div class="sub">' + (S ? (W.length ? 'Weekly ' + esc(BN) + ' deals at ' + esc(S.n) + '.' : esc(S.n) + ' isn\u2019t running a weekly ' + esc(BN) + ' deal this month.') : 'Running at participating shops. Pick your shop to see which ones it runs.') + '</div>' +
+        '<div class="wk">' + W.map(function (w) { return '<div class="wi"><div class="pct">' + esc(w.pct) + '</div><div><b>' + esc(w.pct + ' ' + w.what) + '</b><small>' + esc(w.freq) + (S ? '' : ' \u00b7 ' + count(w.id) + ' shops') + '</small></div></div>'; }).join('') +
+        (W.length ? '<div class="note">Each shop picks its own day' + (S ? ' \u2014 check ' + esc(S.n) + '\u2019s menu for this week\u2019s deal.' : 's \u2014 check your shop\u2019s menu for this week\u2019s deal.') + '</div>' : '') + '</div>';
     }
 
     /* ---------- calendar grid ---------- */
@@ -351,9 +352,9 @@
       var P = datedOn(day), W = weeklyFor(), S = shop();
       if (P.length) {
         var p = P[0];
-        return { hot: true, c: p.color, h: '<em>' + esc(p.pct) + ' off</em>' + esc(p.short || p.name), m: S ? esc(p.what) : count(p.id) + ' shops' + (W.length ? ' · plus weekly deals' : '') };
+        return { hot: true, c: p.color, h: '<em>' + esc(p.pct) + ' off</em>' + esc(p.short || p.name), m: S ? esc(p.what) : count(p.id) + ' shops' + (W.length ? ' \u00b7 plus weekly deals' : '') };
       }
-      if (W.length) return { h: 'Weekly deals', w: true, m: W.map(function (w) { return esc(w.pct + ' ' + w.label); }).join(' · ') };
+      if (W.length) return { h: 'Weekly deals', w: true, m: W.map(function (w) { return esc(w.pct + ' ' + w.label); }).join(' \u00b7 ') };
       return { quiet: true, h: '', m: '' };
     }
     function buildGrid() {
@@ -368,7 +369,7 @@
         var past = (todayNum && day < todayNum) || isPastMonth;
         b.className = 'day' + (t.hot ? ' hot' : '') + (t.quiet ? ' quiet' : '') + (past ? ' past' : '') + (showPast ? ' show' : '') + (day === todayNum ? ' is-today' : '') + (hidePast && day < weekStart ? ' hidden' : '');
         b.dataset.day = day; if (t.c) b.style.setProperty('--c', t.c);
-        b.setAttribute('aria-label', DN[dow(day)] + ', ' + MONTH + ' ' + day + (t.hot ? ' — ' + datedOn(day)[0].name : ''));
+        b.setAttribute('aria-label', DN[dow(day)] + ', ' + MONTH + ' ' + day + (t.hot ? ' \u2014 ' + datedOn(day)[0].name : ''));
         b.innerHTML = '<div class="n"><b>' + day + '</b><span class="' + (day === todayNum ? 'tdy' : '') + '">' + (day === todayNum ? 'Today' : DN[dow(day)].slice(0, 3)) + '</span></div>' +
           '<div class="h' + (t.w ? ' w' : '') + '">' + t.h + '</div><div class="m">' + t.m + '</div>' + (t.quiet ? '' : '<div class="more">' + (shop() ? 'Details' : t.hot ? 'See where' : 'See shops') + ' &rarr;</div>');
         if (!t.quiet) b.addEventListener('click', function () { openDay(day); });
@@ -387,7 +388,7 @@
     var dealRow = function (p, top, sub) { return '<div class="deal' + (top ? ' top' : '') + '"' + (p.color ? ' style="--c:' + esc(p.color) + '"' : '') + '><div class="pct">' + esc(p.pct) + '</div><div><b>' + esc(p.pct + ' ' + p.what) + '</b><small>' + sub + '</small></div></div>'; };
     var shopRow = function (s, ids, hotIds) {
       var mp = mapsOf(s), d = miles(s);
-      return '<div class="shop' + (s.id === shopId ? ' me' : '') + '"><div><b>' + esc(s.n) + '</b><small>' + esc(where(s)) + (d ? ' · ' + d : '') + '</small><div class="tags">' +
+      return '<div class="shop' + (s.id === shopId ? ' me' : '') + '"><div><b>' + esc(s.n) + '</b><small>' + esc(where(s)) + (d ? ' \u00b7 ' + d : '') + '</small><div class="tags">' +
         ids.filter(function (id) { return has(s, id); }).map(function (id) { var p = promo(id); return '<span class="' + (hotIds.indexOf(id) !== -1 ? 'hot' : '') + '">' + esc(p.pct + ' ' + (p.label || p.short || p.name)) + '</span>'; }).join('') +
         '</div></div><div class="acts"><a class="btn" href="' + esc(linkOf(s)) + '" target="_blank" rel="noopener">Visit ' + arrow + '</a>' + (mp ? '<a class="btn ghost" href="' + esc(mp) + '" target="_blank" rel="noopener" aria-label="Directions to ' + esc(s.n) + '">' + pin + '</a>' : '') + '</div></div>';
     };
@@ -398,21 +399,21 @@
       var c = P[0] ? P[0].color : (allP[0] && !S ? allP[0].color : null);
       md.style.setProperty('--c', c || 'var(--line-2)');
       var kick = P.length ? P.map(function (p) { return p.name; }).join(' + ') : 'Weekly deals';
-      var sub = P.length ? (day === P[0].to ? (P[0].from === P[0].to ? 'One day only' : 'Last day') : 'Limited time · through ' + DN[dow(P[0].to)] + ' ' + M + '/' + P[0].to) : (S ? 'At ' + esc(S.n) : 'At participating shops');
+      var sub = P.length ? (day === P[0].to ? (P[0].from === P[0].to ? 'One day only' : 'Last day') : 'Limited time \u00b7 through ' + DN[dow(P[0].to)] + ' ' + M + '/' + P[0].to) : (S ? 'At ' + esc(S.n) : 'At participating shops');
       var html = '<div class="band"><div><div class="k">' + esc(kick) + '</div><div class="d" id="ccMdTitle">' + DN[dow(day)] + ', ' + MONTH + ' ' + day + '</div><div class="s">' + sub + '</div></div><button type="button" class="cl" aria-label="Close">&times;</button></div>' +
         '<div class="nav"><button type="button" data-nav="-1"' + (day === 1 ? ' style="visibility:hidden"' : '') + '>&larr; ' + MON + ' ' + (day - 1) + '</button><button type="button" data-nav="1"' + (day === daysIn ? ' style="visibility:hidden"' : '') + '>' + MON + ' ' + (day + 1) + ' &rarr;</button></div><div class="bd">';
       if (S) {
         html += '<div class="sec"><div class="st"><h4>At ' + esc(S.n) + '</h4><small>' + esc(where(S)) + '</small></div><div class="deals">' +
-          P.map(function (p) { return dealRow(p, true, esc(p.name + ' · ' + range(p))); }).join('') +
-          W.map(function (w) { return dealRow(w, false, esc(w.freq + ' — the shop picks the day, check their menu')); }).join('') +
-          (!P.length && !W.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No ' + esc(BN) + ' deal posted for this day</b><small>Check the shop’s menu for current pricing.</small></div></div>' : '') + '</div></div>' +
+          P.map(function (p) { return dealRow(p, true, esc(p.name + ' \u00b7 ' + range(p))); }).join('') +
+          W.map(function (w) { return dealRow(w, false, esc(w.freq + ' \u2014 the shop picks the day, check their menu')); }).join('') +
+          (!P.length && !W.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No ' + esc(BN) + ' deal posted for this day</b><small>Check the shop\u2019s menu for current pricing.</small></div></div>' : '') + '</div></div>' +
           '<div class="shops">' + shopRow(S, P.map(function (p) { return p.id; }).concat(W.map(function (w) { return w.id; })), P.map(function (p) { return p.id; })) + '</div>';
         var others = allP.filter(function (p) { return !has(S, p.id); });
-        if (others.length) html += '<div class="sec"><div class="st"><h4>Also today at other shops</h4></div><div class="deals">' + others.map(function (p) { return dealRow(p, true, count(p.id) + ' shops · ' + esc(range(p))); }).join('') + '</div><button type="button" class="moreb" id="ccAll" style="margin-top:8px">See every shop running it</button></div>';
+        if (others.length) html += '<div class="sec"><div class="st"><h4>Also today at other shops</h4></div><div class="deals">' + others.map(function (p) { return dealRow(p, true, count(p.id) + ' shops \u00b7 ' + esc(range(p))); }).join('') + '</div><button type="button" class="moreb" id="ccAll" style="margin-top:8px">See every shop running it</button></div>';
       } else {
         html += '<div class="sec"><div class="st"><h4>' + esc(BN) + ' deals</h4><small>' + (P.length ? 'Limited time + weekly' : 'This week') + '</small></div><div class="deals">' +
-          P.map(function (p) { return dealRow(p, true, esc(p.name) + ' · ' + count(p.id) + ' shops'); }).join('') +
-          W.map(function (w) { return dealRow(w, false, esc(w.freq) + ' · ' + count(w.id) + ' shops · day varies by shop'); }).join('') + '</div></div>';
+          P.map(function (p) { return dealRow(p, true, esc(p.name) + ' \u00b7 ' + count(p.id) + ' shops'); }).join('') +
+          W.map(function (w) { return dealRow(w, false, esc(w.freq) + ' \u00b7 ' + count(w.id) + ' shops \u00b7 day varies by shop'); }).join('') + '</div></div>';
       }
       if (!S) html += shopsSection(day, P, W);
       html += '<div class="fine">' + esc(D.finePrint || '') + '</div></div>';
@@ -438,10 +439,10 @@
       var draw = function () {
         var pool = SHOPS.filter(function (s) { return (hot.length ? hot : ids).some(function (id) { return has(s, id); }); });
         var found = sortShops(pool.filter(function (s) { return match(s, q.value.trim()); }));
-        md.querySelector('#ccShopCount').textContent = pool.length + ' shops' + (userPos ? ' · nearest first' : '');
+        md.querySelector('#ccShopCount').textContent = pool.length + ' shops' + (userPos ? ' \u00b7 nearest first' : '');
         list.innerHTML = found.slice(0, limit).map(function (s) { return shopRow(s, ids, hot); }).join('') +
           (found.length > limit ? '<button type="button" class="moreb" id="ccMore">Show ' + Math.min(found.length - limit, 24) + ' more of ' + (found.length - limit) + '</button>' : '') +
-          (!found.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No shop matches “' + esc(q.value) + '”</b><small><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Find ' + esc(BN) + ' near you &rarr;</a></small></div></div>' : '');
+          (!found.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No shop matches \u201c' + esc(q.value) + '\u201d</b><small><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Find ' + esc(BN) + ' near you &rarr;</a></small></div></div>' : '');
         var more = list.querySelector('#ccMore'); if (more) more.addEventListener('click', function () { limit += 24; draw(); });
       };
       q.addEventListener('input', function () { limit = 12; draw(); });
