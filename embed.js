@@ -11,15 +11,16 @@
 (function () {
   'use strict';
   var script = document.currentScript;
-  var host = document.getElementById('cc-deals');
-  if (!host) { host = document.createElement('section'); host.id = 'cc-deals'; (script ? script.parentNode : document.body).insertBefore(host, script || null); }
-  host.setAttribute('aria-label', 'Connected deals calendar');
+  var HID = 'cc-deals'; // page element id; also scopes the CSS
+  var host = document.getElementById(HID);
+  if (!host) { host = document.createElement('section'); host.id = HID; (script ? script.parentNode : document.body).insertBefore(host, script || null); }
+  host.setAttribute('aria-label', 'Deals calendar');
   var base = script && script.src ? script.src : location.href;
   var fixedSrc = host.getAttribute('data-src');
 
   /* ---------- styles (scoped to #cc-deals) ---------- */
   var CSS = '\
-#cc-deals{--bg:#151515;--bg-2:#1E1E1E;--bg-3:#262626;--line:#2E2E2E;--line-2:#444;--tx:#FFFFFF;--tx-2:#C9C9C9;--tx-3:#8E8E8E;--acc:#1A98CE;--acc-2:#5FC0EA;--ink:#0E0E0E;--c:var(--acc);background:var(--bg);color:var(--tx);font-family:"Figtree","Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:36px 20px 56px;box-sizing:border-box;text-align:left}\
+#cc-deals{--fh:"Jost",sans-serif;--fb:"Figtree","Helvetica Neue",Arial,sans-serif;--on-acc:#fff;--hero:#0C2A38;--bg:#151515;--bg-2:#1E1E1E;--bg-3:#262626;--line:#2E2E2E;--line-2:#444;--tx:#FFFFFF;--tx-2:#C9C9C9;--tx-3:#8E8E8E;--acc:#1A98CE;--acc-2:#5FC0EA;--ink:#0E0E0E;--c:var(--acc);background:var(--bg);color:var(--tx);font-family:var(--fb);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;padding:36px 20px 56px;box-sizing:border-box;text-align:left}\
 #cc-deals *,#cc-deals *::before,#cc-deals *::after{box-sizing:border-box}\
 #cc-deals button,#cc-deals input{font:inherit;color:inherit;margin:0;letter-spacing:normal;text-transform:none;box-shadow:none;border-radius:0}\
 #cc-deals button{cursor:pointer;background:none;border:0;padding:0;line-height:inherit}\
@@ -28,38 +29,38 @@
 #cc-deals .in{max-width:1180px;margin:0 auto}\
 #cc-deals .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;margin-bottom:22px}\
 #cc-deals .logo{display:block;width:150px;height:auto;margin:0 0 10px -4px}\
-#cc-deals .kicker{font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-2);font-weight:600}\
-#cc-deals h2.ttl{font-family:"Jost",sans-serif;font-weight:700;font-size:44px;line-height:1.02;margin:6px 0 10px;letter-spacing:.04em;text-transform:uppercase}\
+#cc-deals .kicker{font-family:var(--fh);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc-2);font-weight:600}\
+#cc-deals h2.ttl{font-family:var(--fh);font-weight:700;font-size:44px;line-height:1.02;margin:6px 0 10px;letter-spacing:.04em;text-transform:uppercase}\
 #cc-deals h2.ttl span{color:var(--acc)}\
 #cc-deals .lede{color:var(--tx-2);max-width:58ch}\
 #cc-deals .mnav{display:flex;gap:6px}\
-#cc-deals .mnav button{border:1.5px solid var(--line-2);padding:9px 16px;font-family:"Jost",sans-serif;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-2);transition:all .15s}\
+#cc-deals .mnav button{border:1.5px solid var(--line-2);padding:9px 16px;font-family:var(--fh);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-2);transition:all .15s}\
 #cc-deals .mnav button:hover{border-color:var(--tx);color:var(--tx)}\
 #cc-deals .mnav button[aria-pressed="true"]{background:var(--tx);border-color:var(--tx);color:var(--ink)}\
 /* feature banner */\
-#cc-deals .evt{display:grid;grid-template-columns:1fr auto;gap:18px 28px;align-items:center;width:100%;margin:0 0 18px;padding:26px 28px;text-align:left;color:#fff;background:radial-gradient(700px 260px at 0% 0%,color-mix(in srgb,var(--c) 45%,transparent),transparent 70%),linear-gradient(135deg,#0C2A38,#111 70%);border:2px solid var(--c);box-shadow:0 14px 40px color-mix(in srgb,var(--c) 22%,transparent)}\
-#cc-deals .evt-ey{font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--acc-2)}\
-#cc-deals .evt-h{font-family:"Jost",sans-serif;font-weight:800;font-size:52px;line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:10px 0 8px}\
+#cc-deals .evt{display:grid;grid-template-columns:1fr auto;gap:18px 28px;align-items:center;width:100%;margin:0 0 18px;padding:26px 28px;text-align:left;color:#fff;background:radial-gradient(700px 260px at 0% 0%,color-mix(in srgb,var(--c) 45%,transparent),transparent 70%),linear-gradient(135deg,var(--hero),#0b0b0b 70%);border:2px solid var(--c);box-shadow:0 14px 40px color-mix(in srgb,var(--c) 22%,transparent)}\
+#cc-deals .evt-ey{font-family:var(--fh);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--acc-2)}\
+#cc-deals .evt-h{font-family:var(--fh);font-weight:800;font-size:52px;line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:10px 0 8px}\
 #cc-deals .evt-h em{font-style:normal;color:var(--c)}\
 #cc-deals .evt-s{font-size:16px;font-weight:500;color:rgba(255,255,255,.88)}\
 #cc-deals .evt-r{text-align:right;min-width:200px}\
-#cc-deals .evt-st{font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.7)}\
-#cc-deals .evt-cd{font-family:"Jost",sans-serif;font-weight:700;font-size:30px;line-height:1.05;color:#fff;margin:6px 0 14px}\
-#cc-deals .evt-go{display:inline-block;background:var(--c);color:#fff;font-family:"Jost",sans-serif;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:12px 16px}\
+#cc-deals .evt-st{font-family:var(--fh);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.7)}\
+#cc-deals .evt-cd{font-family:var(--fh);font-weight:700;font-size:30px;line-height:1.05;color:#fff;margin:6px 0 14px}\
+#cc-deals .evt-go{display:inline-block;background:var(--c);color:var(--on-acc);font-family:var(--fh);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:12px 16px}\
 #cc-deals .evt:hover .evt-go{background:#fff;color:var(--ink)}\
 #cc-deals .evt.live .evt-st::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#3DDC84;margin-right:8px;vertical-align:1px;animation:ccPulse 1.3s ease-in-out infinite}\
 @keyframes ccPulse{0%,100%{box-shadow:0 0 0 0 rgba(61,220,132,.7)}50%{box-shadow:0 0 0 7px rgba(61,220,132,0)}}\
 /* shop finder */\
 #cc-deals .row2{display:grid;grid-template-columns:1.1fr 1fr;gap:14px;margin-bottom:22px}\
 #cc-deals .card{background:var(--bg-2);border:1px solid var(--line);padding:20px 22px}\
-#cc-deals .card h3{font-family:"Jost",sans-serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}\
+#cc-deals .card h3{font-family:var(--fh);font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px}\
 #cc-deals .card .sub{font-size:13px;color:var(--tx-3);margin-bottom:12px}\
 #cc-deals .find{position:relative}\
 #cc-deals .fbar{display:flex;gap:6px}\
 #cc-deals .fbar input{flex:1;min-width:0;background:var(--bg);border:1.5px solid var(--line-2);padding:11px 12px;font-size:15px;color:var(--tx);outline:none}\
 #cc-deals .fbar input::placeholder{color:var(--tx-3)}\
 #cc-deals .fbar input:focus{border-color:var(--acc)}\
-#cc-deals .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;background:var(--acc);color:#fff;font-family:"Jost",sans-serif;font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:11px 14px;text-decoration:none;white-space:nowrap;transition:background .15s,color .15s}\
+#cc-deals .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;background:var(--acc);color:var(--on-acc);font-family:var(--fh);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:11px 14px;text-decoration:none;white-space:nowrap;transition:background .15s,color .15s}\
 #cc-deals .btn:hover{background:#fff;color:var(--ink)}\
 #cc-deals .btn.ghost{background:transparent;border:1.5px solid var(--line-2);color:var(--tx)}\
 #cc-deals .btn.ghost:hover{border-color:#fff;background:transparent;color:#fff}\
@@ -77,20 +78,20 @@
 #cc-deals .chips button:hover{border-color:var(--acc);color:#fff}\
 #cc-deals .picked{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--bg);border:1.5px solid var(--acc);padding:14px 16px}\
 #cc-deals .picked .l{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc-2);font-weight:700}\
-#cc-deals .picked b{display:block;font-family:"Jost",sans-serif;font-size:20px;font-weight:700;line-height:1.15;margin-top:2px}\
+#cc-deals .picked b{display:block;font-family:var(--fh);font-size:20px;font-weight:700;line-height:1.15;margin-top:2px}\
 #cc-deals .picked small{display:block;color:var(--tx-3);font-size:13px;margin-top:2px}\
 #cc-deals .picked .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}\
 #cc-deals .chg{font-size:13px;color:var(--acc-2);text-decoration:underline;text-underline-offset:3px;font-weight:600;margin-top:8px}\
 /* weekly card */\
 #cc-deals .wk{display:grid;gap:8px}\
 #cc-deals .wi{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;background:var(--bg);border:1px solid var(--line);padding:10px 12px}\
-#cc-deals .wi .pct{font-family:"Jost",sans-serif;font-weight:800;font-size:24px;line-height:1;color:var(--acc);text-align:center}\
+#cc-deals .wi .pct{font-family:var(--fh);font-weight:800;font-size:24px;line-height:1;color:var(--acc);text-align:center}\
 #cc-deals .wi b{display:block;font-weight:700;font-size:14.5px;line-height:1.25}\
 #cc-deals .wi small{display:block;color:var(--tx-3);font-size:12.5px;margin-top:2px}\
 #cc-deals .wk .note{font-size:12.5px;color:var(--tx-3)}\
 /* calendar */\
 #cc-deals .tools{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}\
-#cc-deals .tools h3{font-family:"Jost",sans-serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase}\
+#cc-deals .tools h3{font-family:var(--fh);font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase}\
 #cc-deals .legend{display:flex;gap:8px 16px;flex-wrap:wrap;font-size:12px;color:var(--tx-2);font-weight:600}\
 #cc-deals .legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;background:var(--c)}\
 #cc-deals .legend i.w{background:var(--line-2)}\
@@ -98,7 +99,7 @@
 #cc-deals .earlier.on{display:flex}\
 #cc-deals .earlier span{color:var(--acc-2)}\
 #cc-deals .dows{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px}\
-#cc-deals .dows div{font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--tx-3);font-weight:600;padding:0 4px}\
+#cc-deals .dows div{font-family:var(--fh);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--tx-3);font-weight:600;padding:0 4px}\
 #cc-deals .grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}\
 #cc-deals .day{position:relative;text-align:left;background:var(--bg-2);border:1px solid var(--line);min-height:128px;padding:12px 11px 10px;display:flex;flex-direction:column;gap:5px;transition:transform .15s,border-color .15s,box-shadow .15s;overflow:hidden;width:100%}\
 #cc-deals .day::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--line-2)}\
@@ -112,10 +113,10 @@
 #cc-deals .day:not(.blank):not(.quiet):hover{transform:translateY(-2px);border-color:var(--tx-3);box-shadow:0 10px 26px rgba(0,0,0,.45)}\
 #cc-deals .day.is-today{border-color:#fff;box-shadow:0 0 0 1px #fff}\
 #cc-deals .day .n{display:flex;justify-content:space-between;align-items:baseline}\
-#cc-deals .day .n b{font-family:"Jost",sans-serif;font-weight:700;font-size:21px;line-height:1}\
+#cc-deals .day .n b{font-family:var(--fh);font-weight:700;font-size:21px;line-height:1}\
 #cc-deals .day .n span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--tx-3)}\
 #cc-deals .day .n span.tdy{background:#fff;color:var(--ink);padding:3px 6px}\
-#cc-deals .day .h{font-family:"Jost",sans-serif;font-weight:700;font-size:15px;line-height:1.15;text-transform:uppercase;letter-spacing:.02em}\
+#cc-deals .day .h{font-family:var(--fh);font-weight:700;font-size:15px;line-height:1.15;text-transform:uppercase;letter-spacing:.02em}\
 #cc-deals .day .h em{font-style:normal;color:var(--c)}\
 #cc-deals .day.hot .h em{font-size:22px;display:block;line-height:1}\
 #cc-deals .day .h.w{color:var(--tx-2);font-size:13px}\
@@ -127,8 +128,8 @@
 #cc-deals .md{position:fixed;z-index:2147483001;top:50%;left:50%;transform:translate(-50%,-50%);width:min(700px,calc(100% - 24px));max-height:min(90vh,940px);overflow:auto;background:var(--bg);border:1px solid var(--line-2);box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;color:var(--tx);overscroll-behavior:contain}\
 #cc-deals .md.on{display:block}\
 #cc-deals .md .band{position:sticky;top:0;background:#000;border-bottom:4px solid var(--c);padding:18px 22px 16px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start;z-index:2}\
-#cc-deals .md .band .k{font-family:"Jost",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--acc-2)}\
-#cc-deals .md .band .d{font-family:"Jost",sans-serif;font-weight:700;font-size:28px;line-height:1.1;margin:6px 0 4px;text-transform:uppercase;letter-spacing:.04em}\
+#cc-deals .md .band .k{font-family:var(--fh);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--acc-2)}\
+#cc-deals .md .band .d{font-family:var(--fh);font-weight:700;font-size:28px;line-height:1.1;margin:6px 0 4px;text-transform:uppercase;letter-spacing:.04em}\
 #cc-deals .md .band .s{font-weight:500;font-size:13.5px;color:var(--tx-2)}\
 #cc-deals .md .band .cl{background:rgba(255,255,255,.12);width:36px;height:36px;display:grid;place-items:center;font-size:20px;line-height:1;font-weight:600;color:#fff}\
 #cc-deals .md .band .cl:hover{background:rgba(255,255,255,.25)}\
@@ -137,12 +138,12 @@
 #cc-deals .md .nav button:hover{color:#fff}\
 #cc-deals .md .bd{padding:12px 22px 26px;display:grid;gap:22px}\
 #cc-deals .sec .st{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}\
-#cc-deals .sec .st h4{font-family:"Jost",sans-serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;line-height:1.2}\
+#cc-deals .sec .st h4{font-family:var(--fh);font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;line-height:1.2}\
 #cc-deals .sec .st small{font-size:12.5px;color:var(--tx-3);font-weight:600}\
 #cc-deals .deals{display:grid;gap:6px}\
 #cc-deals .deal{display:grid;grid-template-columns:70px 1fr;gap:12px;align-items:center;background:var(--bg-2);border:1px solid var(--line);padding:12px 14px}\
 #cc-deals .deal.top{border-color:var(--c);background:linear-gradient(90deg,color-mix(in srgb,var(--c) 22%,var(--bg-2)),var(--bg-2))}\
-#cc-deals .deal .pct{font-family:"Jost",sans-serif;font-weight:800;font-size:28px;line-height:1;color:var(--c);text-align:center}\
+#cc-deals .deal .pct{font-family:var(--fh);font-weight:800;font-size:28px;line-height:1;color:var(--c);text-align:center}\
 #cc-deals .deal b{display:block;font-weight:700;font-size:15px;line-height:1.25}\
 #cc-deals .deal small{display:block;color:var(--tx-3);font-size:12.5px;margin-top:3px}\
 #cc-deals .sbar{display:flex;gap:6px;margin-bottom:8px}\
@@ -167,21 +168,18 @@
 #cc-deals .err{padding:24px;color:var(--tx-2);text-align:center}\
 #cc-deals .err a{color:var(--acc-2)}\
 @media (max-width:900px){#cc-deals .row2{grid-template-columns:1fr}#cc-deals h2.ttl{font-size:34px}#cc-deals .evt-h{font-size:40px}}\
-@media (max-width:640px){#cc-deals{padding:22px 12px 44px}#cc-deals .logo{width:120px}#cc-deals .evt{grid-template-columns:1fr;padding:20px 18px 22px}#cc-deals .evt-h{font-size:34px}#cc-deals .evt-r{text-align:left;min-width:0}#cc-deals .evt-cd{font-size:24px}#cc-deals .card{padding:16px}#cc-deals .dows{display:none}#cc-deals .grid{grid-template-columns:1fr 1fr}#cc-deals .day.blank,#cc-deals .day.past,#cc-deals .day.quiet{display:none}#cc-deals .day.past.show{display:flex}#cc-deals .day{min-height:112px}#cc-deals .legend{display:none}#cc-deals .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;align-items:center;font-size:12.5px;color:var(--tx-3)}\
-#cc-deals .chips button{border:1px solid var(--line-2);padding:6px 10px;font-size:12.5px;font-weight:600;color:var(--tx-2)}\
-#cc-deals .chips button:hover{border-color:var(--acc);color:#fff}\
-#cc-deals .picked{grid-template-columns:1fr}#cc-deals .picked .acts{justify-content:flex-start}#cc-deals .shop{grid-template-columns:1fr}#cc-deals .md{top:auto;bottom:0;left:0;transform:none;width:100%;max-height:92vh}#cc-deals .md .band .d{font-size:22px}}\
+@media (max-width:640px){#cc-deals{padding:22px 12px 44px}#cc-deals .logo{width:120px}#cc-deals .evt{grid-template-columns:1fr;padding:20px 18px 22px}#cc-deals .evt-h{font-size:34px}#cc-deals .evt-r{text-align:left;min-width:0}#cc-deals .evt-cd{font-size:24px}#cc-deals .card{padding:16px}#cc-deals .dows{display:none}#cc-deals .grid{grid-template-columns:1fr 1fr}#cc-deals .day.blank,#cc-deals .day.past,#cc-deals .day.quiet{display:none}#cc-deals .day.past.show{display:flex}#cc-deals .day{min-height:112px}#cc-deals .legend{display:none}#cc-deals .picked{grid-template-columns:1fr}#cc-deals .picked .acts{justify-content:flex-start}#cc-deals .shop{grid-template-columns:1fr}#cc-deals .md{top:auto;bottom:0;left:0;transform:none;width:100%;max-height:92vh}#cc-deals .md .band .d{font-size:22px}}\
 @media (prefers-reduced-motion:reduce){#cc-deals *{transition:none !important;animation:none !important}}';
 
-  if (!document.getElementById('cc-deals-css')) {
-    var st = document.createElement('style'); st.id = 'cc-deals-css'; st.textContent = CSS; document.head.appendChild(st);
-    var f = document.createElement('link'); f.rel = 'stylesheet';
-    f.href = 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Jost:wght@500;600;700;800&display=swap';
-    document.head.appendChild(f);
+  if (!document.getElementById(HID + '-css')) {
+    var st = document.createElement('style'); st.id = HID + '-css'; st.textContent = CSS.replace(/#cc-deals/g, '#' + HID); document.head.appendChild(st);
   }
+  var fontsLoaded = {};
+  var loadFonts = function (u) { if (!u || fontsLoaded[u]) return; fontsLoaded[u] = 1; var f = document.createElement('link'); f.rel = 'stylesheet'; f.href = u; document.head.appendChild(f); };
 
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
-  var FALLBACK = 'https://connectedcannabisco.com/pages/find-products';
+  var FALLBACK = host.getAttribute('data-fallback') || 'https://connectedcannabisco.com/pages/find-products';
+  var BN = 'our';
   var TZ = 'America/Los_Angeles';
   var partsNow = function (tz) {
     try {
@@ -200,13 +198,13 @@
   var first = fixedSrc ? load(fixedSrc)
     : getMonth(now0.y + '-' + pad(now0.m)).catch(function () { return load(new URL('deals.json', base).href); });
   first.then(function (D) { cache[D.month] = Promise.resolve(D); init(D); })
-    .catch(function (e) { host.innerHTML = '<div class="in"><div class="err">Deals are taking a moment to load. <a href="' + FALLBACK + '">Find Connected near you</a> or refresh the page.</div></div>'; console.error('cc-deals', e); });
+    .catch(function (e) { host.innerHTML = '<div class="in"><div class="err">Deals are taking a moment to load. <a href="' + FALLBACK + '">Find a shop near you</a> or refresh the page.</div></div>'; console.error('cc-deals', e); });
 
   /* ---------- state shared across months ---------- */
   var shopId = null, shopName = '', userPos = null, showPast = false;
   try {
-    shopId = new URLSearchParams(location.search).get('shop') || host.getAttribute('data-shop') || localStorage.getItem('cc_shop');
-    shopName = localStorage.getItem('cc_shop') === shopId ? (localStorage.getItem('cc_shop_name') || '') : '';
+    shopId = new URLSearchParams(location.search).get('shop') || host.getAttribute('data-shop') || localStorage.getItem(HID + '_shop');
+    shopName = localStorage.getItem(HID + '_shop') === shopId ? (localStorage.getItem(HID + '_shop_name') || '') : '';
   } catch (e) {}
   var arrow = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4"/></svg>';
   var pin = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 11s3.5-3.4 3.5-6A3.5 3.5 0 0 0 2.5 5c0 2.6 3.5 6 3.5 6z"/><circle cx="6" cy="5" r="1.2"/></svg>';
@@ -215,6 +213,11 @@
   function init(D) {
     TZ = (D.brand && D.brand.timeZone) || TZ;
     FALLBACK = (D.brand && D.brand.findProducts) || FALLBACK;
+    BN = (D.brand && D.brand.name) || BN;
+    host.setAttribute('aria-label', BN + ' deals calendar');
+    var TH = (D.brand && D.brand.theme) || {};
+    Object.keys(TH).forEach(function (k) { host.style.setProperty('--' + k, TH[k]); });
+    loadFonts((D.brand && D.brand.fonts) || 'https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Jost:wght@500;600;700;800&display=swap');
     var now = partsNow(TZ);
     var Y = +D.month.split('-')[0], M = +D.month.split('-')[1];
     var daysIn = new Date(Y, M, 0).getDate(), firstDow = new Date(Y, M - 1, 1).getDay();
@@ -266,7 +269,7 @@
       '<div class="row2"><div class="card find" id="ccFind"></div><div class="card" id="ccWeekly"></div></div>' +
       '<div class="tools"><h3>' + esc(MONTH) + ' calendar</h3><div class="legend">' + DATED.map(function (p) { return '<span><i style="--c:' + esc(p.color || 'var(--acc)') + '"></i>' + esc(p.short || p.name) + ' ' + range(p) + '</span>'; }).join('') + (WEEKLY.length ? '<span><i class="w"></i>Weekly deals</span>' : '') + '</div></div>' +
       '<button type="button" class="earlier" id="ccEarlier"></button><div class="dows">' + ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(function (d) { return '<div>' + d + '</div>'; }).join('') + '</div><div class="grid" id="ccGrid"></div>' +
-      '<div class="foot"><span>' + esc(D.finePrint || '') + '</span><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Don’t see your shop? Find Connected near you &rarr;</a></div></div>' +
+      '<div class="foot"><span>' + esc(D.finePrint || '') + '</span><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Don’t see your shop? Find ' + esc(BN) + ' near you &rarr;</a></div></div>' +
       '<div class="ov" id="ccOv"></div><div class="md" id="ccMd" role="dialog" aria-modal="true" aria-labelledby="ccMdTitle"></div>';
     var $ = function (id) { return host.querySelector('#' + id); };
     Array.prototype.forEach.call(host.querySelectorAll('.mnav button'), function (b) {
@@ -278,7 +281,7 @@
     });
     var setShop = function (id) {
       shopId = id; shopName = id && byId[id] ? byId[id].n : '';
-      try { if (id) { localStorage.setItem('cc_shop', id); localStorage.setItem('cc_shop_name', shopName); } else { localStorage.removeItem('cc_shop'); localStorage.removeItem('cc_shop_name'); } } catch (e) {}
+      try { if (id) { localStorage.setItem(HID + '_shop', id); localStorage.setItem(HID + '_shop_name', shopName); } else { localStorage.removeItem(HID + '_shop'); localStorage.removeItem(HID + '_shop_name'); } } catch (e) {}
       renderAll();
     };
 
@@ -306,7 +309,7 @@
       var el = $('ccFind'), S = shop();
       if (S) {
         var mp = mapsOf(S);
-        el.innerHTML = '<h3>Your shop</h3><div class="sub">The calendar now shows only this shop’s Connected deals.</div>' +
+        el.innerHTML = '<h3>Your shop</h3><div class="sub">The calendar now shows only this shop’s ' + esc(BN) + ' deals.</div>' +
           '<div class="picked"><div><div class="l">Shopping at</div><b>' + esc(S.n) + '</b><small>' + esc(where(S)) + '</small></div><div class="acts">' +
           '<a class="btn" href="' + esc(linkOf(S)) + '" target="_blank" rel="noopener">Visit shop ' + arrow + '</a>' + (mp ? '<a class="btn ghost" href="' + esc(mp) + '" target="_blank" rel="noopener">' + pin + 'Directions</a>' : '') + '</div></div>' +
           '<button type="button" class="chg" id="ccChange">Change shop</button>';
@@ -314,7 +317,7 @@
         return;
       }
       var gone = shopId && !byId[shopId] ? (shopName || 'Your shop') : '';
-      el.innerHTML = '<h3>Find your shop</h3><div class="sub">' + (gone ? '<b style="color:#fff">' + esc(gone) + ' has no Connected deals posted for ' + esc(MONTH) + ' yet.</b> Check back soon, or pick another shop. ' : '') + SHOPS.length + ' California dispensaries &amp; delivery services are running Connected deals in ' + esc(MONTH) + '.</div>' +
+      el.innerHTML = '<h3>Find your shop</h3><div class="sub">' + (gone ? '<b style="color:#fff">' + esc(gone) + ' has no ' + esc(BN) + ' deals posted for ' + esc(MONTH) + ' yet.</b> Check back soon, or pick another shop. ' : '') + SHOPS.length + ' California dispensaries &amp; delivery services are running ' + esc(BN) + ' deals in ' + esc(MONTH) + '.</div>' +
         '<div class="fbar"><input id="ccQ" type="search" autocomplete="off" placeholder="Shop name or city" aria-label="Search shops by name or city"><button type="button" class="btn" id="ccNear">' + pin + 'Near me</button></div><div class="res" id="ccRes" role="list"></div>' +
         '<div class="chips" id="ccChips"><span>Popular:</span>' + topCities().map(function (c) { return '<button type="button" data-q="' + esc(c) + '">' + esc(c) + '</button>'; }).join('') + '</div>';
       var q = $('ccQ'), res = $('ccRes');
@@ -323,7 +326,7 @@
         if (!v && !userPos) { res.innerHTML = ''; return; }
         var list = sortShops(SHOPS.filter(function (s) { return match(s, v); })).slice(0, 8);
         res.innerHTML = list.length ? list.map(function (s) { return '<button type="button" role="listitem" data-id="' + esc(s.id) + '"><b>' + esc(s.n) + '</b><small>' + esc(where(s)) + '</small><i>' + esc(miles(s)) + '</i></button>'; }).join('')
-          : '<div class="none">No match. Try a city, or <a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">find Connected near you</a>.</div>';
+          : '<div class="none">No match. Try a city, or <a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">find ' + esc(BN) + ' near you</a>.</div>';
         Array.prototype.forEach.call(res.querySelectorAll('button[data-id]'), function (b) { b.addEventListener('click', function () { setShop(b.dataset.id); }); });
       };
       q.addEventListener('input', show);
@@ -337,7 +340,7 @@
       var el = $('ccWeekly'), S = shop(), W = weeklyFor();
       if (!WEEKLY.length) { el.style.display = 'none'; return; }
       el.style.display = '';
-      el.innerHTML = '<h3>Every week in ' + esc(MONTH) + '</h3><div class="sub">' + (S ? (W.length ? 'Weekly Connected deals at ' + esc(S.n) + '.' : esc(S.n) + ' isn’t running a weekly Connected deal this month.') : 'Running at participating shops. Pick your shop to see which ones it runs.') + '</div>' +
+      el.innerHTML = '<h3>Every week in ' + esc(MONTH) + '</h3><div class="sub">' + (S ? (W.length ? 'Weekly ' + esc(BN) + ' deals at ' + esc(S.n) + '.' : esc(S.n) + ' isn’t running a weekly ' + esc(BN) + ' deal this month.') : 'Running at participating shops. Pick your shop to see which ones it runs.') + '</div>' +
         '<div class="wk">' + W.map(function (w) { return '<div class="wi"><div class="pct">' + esc(w.pct) + '</div><div><b>' + esc(w.pct + ' ' + w.what) + '</b><small>' + esc(w.freq) + (S ? '' : ' · ' + count(w.id) + ' shops') + '</small></div></div>'; }).join('') +
         (W.length ? '<div class="note">Each shop picks its own day' + (S ? ' — check ' + esc(S.n) + '’s menu for this week’s deal.' : 's — check your shop’s menu for this week’s deal.') + '</div>' : '') + '</div>';
     }
@@ -402,12 +405,12 @@
         html += '<div class="sec"><div class="st"><h4>At ' + esc(S.n) + '</h4><small>' + esc(where(S)) + '</small></div><div class="deals">' +
           P.map(function (p) { return dealRow(p, true, esc(p.name + ' · ' + range(p))); }).join('') +
           W.map(function (w) { return dealRow(w, false, esc(w.freq + ' — the shop picks the day, check their menu')); }).join('') +
-          (!P.length && !W.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No Connected deal posted for this day</b><small>Check the shop’s menu for current pricing.</small></div></div>' : '') + '</div></div>' +
+          (!P.length && !W.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No ' + esc(BN) + ' deal posted for this day</b><small>Check the shop’s menu for current pricing.</small></div></div>' : '') + '</div></div>' +
           '<div class="shops">' + shopRow(S, P.map(function (p) { return p.id; }).concat(W.map(function (w) { return w.id; })), P.map(function (p) { return p.id; })) + '</div>';
         var others = allP.filter(function (p) { return !has(S, p.id); });
         if (others.length) html += '<div class="sec"><div class="st"><h4>Also today at other shops</h4></div><div class="deals">' + others.map(function (p) { return dealRow(p, true, count(p.id) + ' shops · ' + esc(range(p))); }).join('') + '</div><button type="button" class="moreb" id="ccAll" style="margin-top:8px">See every shop running it</button></div>';
       } else {
-        html += '<div class="sec"><div class="st"><h4>Connected deals</h4><small>' + (P.length ? 'Limited time + weekly' : 'This week') + '</small></div><div class="deals">' +
+        html += '<div class="sec"><div class="st"><h4>' + esc(BN) + ' deals</h4><small>' + (P.length ? 'Limited time + weekly' : 'This week') + '</small></div><div class="deals">' +
           P.map(function (p) { return dealRow(p, true, esc(p.name) + ' · ' + count(p.id) + ' shops'); }).join('') +
           W.map(function (w) { return dealRow(w, false, esc(w.freq) + ' · ' + count(w.id) + ' shops · day varies by shop'); }).join('') + '</div></div>';
       }
@@ -438,7 +441,7 @@
         md.querySelector('#ccShopCount').textContent = pool.length + ' shops' + (userPos ? ' · nearest first' : '');
         list.innerHTML = found.slice(0, limit).map(function (s) { return shopRow(s, ids, hot); }).join('') +
           (found.length > limit ? '<button type="button" class="moreb" id="ccMore">Show ' + Math.min(found.length - limit, 24) + ' more of ' + (found.length - limit) + '</button>' : '') +
-          (!found.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No shop matches “' + esc(q.value) + '”</b><small><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Find Connected near you &rarr;</a></small></div></div>' : '');
+          (!found.length ? '<div class="deal"><div class="pct">&ndash;</div><div><b>No shop matches “' + esc(q.value) + '”</b><small><a href="' + esc(FALLBACK) + '" target="_blank" rel="noopener">Find ' + esc(BN) + ' near you &rarr;</a></small></div></div>' : '');
         var more = list.querySelector('#ccMore'); if (more) more.addEventListener('click', function () { limit += 24; draw(); });
       };
       q.addEventListener('input', function () { limit = 12; draw(); });
