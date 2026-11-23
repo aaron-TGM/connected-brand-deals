@@ -1,168 +1,800 @@
 {
   "_readme": "Maps each 'Parent Customer' name on the sales tracker to stores in data/locator.json (the find-products store locator). 'match' = regexes tested against locator store names (case-insensitive); every matching store is listed. Accounts with no locator store get 'name' + 'city' and link to the find-products page. 'rename' fixes typos in locator store names. Add a line here when a new account shows up on the tracker; the build prints any account it can't find.",
   "accounts": {
-    "420 Central Costa Mesa": { "match": ["^420 Central - Newport/Costa Mesa$"] },
-    "420 Kingdom": { "match": ["^420 Kingdom$"] },
-    "Airfield Supply Co. Redwood City": { "match": ["^Airfield RWC$"] },
-    "Ashe Society Santa Ana": { "match": ["^Ashe Society$"] },
-    "Atrium": { "match": ["^Atrium "] },
-    "Benzeen La Brea": { "match": ["^Benzeen$"] },
-    "Big Sur Cannabotanicals": { "match": ["^Big Sur Canna"] },
-    "BorednStone": { "match": ["^Bored n Stone$"] },
-    "BudBees Delivery": { "name": "BudBees Delivery", "city": "" },
-    "Budology": { "name": "Budology", "city": "" },
-    "Buzz Cannabis - Mission Valley": { "name": "Buzz Cannabis – Mission Valley", "city": "San Diego" },
-    "Buzz Delivery": { "name": "Buzz Delivery", "city": "" },
-    "C.R.A.F.T.": { "match": ["^C\\.R\\.A\\.F\\.T\\.$"] },
-    "CA Collective": { "match": ["^CA Collective$"] },
-    "CBCB- Rishon LLC": { "match": ["^Cbcb$"] },
-    "CEAS Collective": { "name": "CEAS Collective", "city": "" },
-    "Cali Love Weaverville": { "name": "Cali Love", "city": "Weaverville" },
-    "California Street Cannabis Company": { "match": ["^California St\\. Cannabis Company"] },
-    "Cana Harbor City": { "match": ["^Cana Harbor City$"] },
-    "CannaCruz - Santa Cruz": { "match": ["^Cannacruz Santa Cruz$"] },
-    "Cannable Oxnard": { "name": "Cannable", "city": "Oxnard" },
-    "Cannagram Delivery": { "match": ["^Cannagram Delivery$"] },
-    "Cannavine Ukiah": { "match": ["^Cannavine$"] },
-    "Capitola Cannabis Club by OFL": { "name": "Capitola Cannabis Club", "city": "Capitola" },
-    "Catalyst Distribution": { "match": ["^Catalyst - "] },
-    "Coachella Greenery": { "match": ["^Coachella Greenery$"] },
-    "Collective Santa Ana": { "name": "Collective", "city": "Santa Ana" },
-    "Cookies - Fashion Valley": { "name": "Cookies – Fashion Valley", "city": "San Diego" },
-    "Cookies Brentwood": { "match": ["^Cookies - Brentwood$"] },
-    "Cornerstone Research Collective": { "match": ["^Cornerstone Collective$"] },
-    "Culture Cannabis Distro": { "match": ["^Culture"] },
-    "Culture Cannabis Jurupa Valley": { "name": "Culture Cannabis", "city": "Jurupa Valley" },
-    "DIXON WELLNESS": { "match": ["^Dixon Wellness Collective$"] },
-    "Delta Boyz": { "name": "Delta Boyz", "city": "" },
-    "Delta Dispensary": { "name": "Delta Dispensary", "city": "" },
-    "Dr. Greenthumb - San Diego": { "match": ["^Dr Greenthumb's San Diego$"] },
-    "EAZE - Hometown Heart - East Bay": { "name": "Hometown Heart (Eaze)", "city": "East Bay" },
-    "Elev8ted Delivery": { "name": "Elev8ted Delivery", "city": "" },
-    "Elevate Lompoc": { "match": ["^Elevate Lompoc$"] },
-    "Embarc Tahoe": { "match": ["^Embarc Tahoe$"] },
-    "Embr La Mesa": { "match": ["^EMBR - La Mesa$"] },
-    "Empire Twin Palms": { "match": ["^Empire - Twin Palms$"] },
-    "Erb & Arbor": { "match": ["^Erb & Arbor$"] },
-    "Erba - Sawtelle": { "name": "Erba – Sawtelle", "city": "Los Angeles" },
-    "Ether": { "match": ["^Ether Cannabis$"] },
-    "Euphoros": { "match": ["^Euphoros$"] },
-    "Evergreen SA": { "match": ["^Evergreen$"] },
-    "Evolv Cannabis": { "name": "Evolv Cannabis", "city": "" },
-    "Exotix Distribution": { "match": ["^Exotix"] },
-    "Flame Santa Rosa": { "match": ["^Flame Dispensary$"] },
-    "Flight on Cherry": { "name": "Flight on Cherry", "city": "" },
-    "Foothill Health and Wellness": { "match": ["^Foothill Health and Wellness$"] },
-    "From The Earth SA": { "match": ["^From The Earth Santa Ana$"] },
-    "Goat Global - Westwood": { "name": "Goat Global – Westwood", "city": "Los Angeles" },
-    "Grass Valley Provisions": { "match": ["^Grass Valley Provisions$"] },
-    "Grasshopper Delivery": { "name": "Grasshopper Delivery", "city": "" },
-    "Green Bean (Woodlake)": { "name": "Green Bean", "city": "Woodlake" },
-    "Green Cross of Torrance": { "match": ["^Green Cross of Torrance$"] },
-    "Green Qween": { "match": ["^Green Qween$"] },
-    "Greenlight Discount Pharmacy": { "match": ["^Greenlight Discount$"] },
-    "Harborside Oakland": { "match": ["^Harborside Oakland$"] },
-    "Haze Almaden": { "name": "Haze – Almaden", "city": "San Jose" },
-    "Hello Cannabis": { "match": ["^Hello Cannabis$"] },
-    "Herb Delivery": { "match": ["^Herb Delivery$"] },
-    "HiKei San Diego": { "match": ["^Hikei Cannabis - San Diego$"] },
-    "High Season Adelanto": { "name": "High Season", "city": "Adelanto" },
-    "Highway 29": { "match": ["^Highway 29 Health Care$"] },
-    "Hoover House": { "name": "Hoover House", "city": "" },
-    "Horizon": { "name": "Horizon", "city": "" },
-    "Humble Root": { "match": ["^Humble Root$"] },
-    "Hyperwolf": { "match": ["^Hyperwolf Delivery$"] },
-    "Instabuds": { "name": "Instabuds", "city": "" },
-    "JETROOM": { "match": ["^Jet Room "] },
-    "Juva": { "match": ["^Juva "] },
-    "Kanna": { "name": "Kanna", "city": "" },
-    "Kolas - Distro": { "name": "Kolas", "city": "" },
-    "LA Kush": { "name": "LA Kush", "city": "Los Angeles" },
-    "Leaf and Lion - Long Beach": { "name": "Leaf and Lion", "city": "Long Beach" },
-    "Legacy Kush": { "name": "Legacy Kush", "city": "" },
-    "Legendary Organics Thousand Oaks": { "match": ["^Legendary Organics$"] },
-    "Lemonnade - Van Nuys": { "name": "Lemonnade", "city": "Van Nuys" },
-    "Liberty Beach Center": { "match": ["^Liberty Beach Center$"] },
-    "Long Beach Wellness Center": { "name": "Long Beach Wellness Center", "city": "Long Beach" },
-    "Mainstage Sacramento": { "match": ["^Mainstage$"] },
-    "Mary Alice": { "match": ["^Mary Alice$"] },
-    "Mercy Wellness - Cotati": { "match": ["^Mercy Wellness \\(Cotati\\)$"] },
-    "Mota": { "match": ["^Mota Inc$"] },
-    "NU Cannabis": { "name": "NU Cannabis", "city": "" },
-    "Natures Story": { "name": "Natures Story", "city": "" },
-    "Nice Guys Delivery": { "match": ["^Nice Guys Delivery$"] },
-    "Nug Sacramento": { "match": ["^Nug$"] },
-    "Oakfruitland Distro": { "name": "Oakfruitland", "city": "Oakland" },
-    "Off Green": { "name": "Off Green", "city": "" },
-    "Off the Charts Palm Springs": { "match": ["^Off The Charts PS$", "^Off The Charts - PS2 Lounge$"] },
-    "Old G Kush": { "match": ["^Old G Kush$"] },
-    "One Plant Parent": { "match": ["^One Plant"] },
-    "Oregrown - Chico": { "match": ["^Oregrown Chico$"] },
-    "Perfect Union Northside (RCP)": { "match": ["^Perfect Union Northside$"] },
-    "Phytologie Wellness Center": { "match": ["^Phytologie Wellness Center$"] },
-    "Platinum Connection": { "match": ["^Platinum Collection$"], "rename": "Platinum Connection" },
-    "Pure Life Collective": { "match": ["^Pure Life Collective"] },
-    "Purple Lotus Patient Center": { "match": ["^Purple Lotus"] },
-    "RISE Pasadena": { "match": ["^RISE Dispensaries Pasadena$"] },
-    "ReBud NOHO": { "name": "ReBud", "city": "North Hollywood" },
-    "Real ZA": { "name": "Real ZA", "city": "" },
-    "Red Moon": { "match": ["^Red Moon$"] },
-    "Remedy Room": { "match": ["^Remedy Room$"] },
-    "Root'd 510": { "name": "Root'd 510", "city": "" },
-    "Roots 2 Harvest": { "name": "Roots 2 Harvest", "city": "" },
-    "SLOCAL Roots GB": { "name": "SLOCAL Roots", "city": "Grover Beach" },
-    "SPARC - Sonoma": { "name": "SPARC", "city": "Sonoma" },
-    "Sacred Roots": { "match": ["^Sacred Roots"] },
-    "Safeport - Oxnard": { "match": ["^Safeport- Oxnard$"] },
-    "Sage and Fire": { "match": ["^Sage and Fire$"] },
-    "Semilla - Herbal Relief Caregivers": { "name": "Semilla", "city": "" },
-    "Sessions By The Bay": { "name": "Sessions By The Bay", "city": "" },
-    "Stash Dash - Atwater Village": { "match": ["^Stash Dash$"] },
-    "Sticky Thumb Delivery": { "match": ["^Sticky Thumb Delivery$"] },
-    "Stiiizy Distro": { "match": ["^STIIIZY"] },
-    "Stilo Supply": { "match": ["^Stilo Supply$"] },
-    "Sugarbudz": { "name": "Sugarbudz", "city": "" },
-    "Sun Valley Caregivers": { "name": "Sun Valley Caregivers", "city": "Sun Valley" },
-    "Sundial Redding": { "match": ["^Sundial Collective - Redding$"] },
-    "Sundial Woodland": { "name": "Sundial", "city": "Woodland" },
-    "Sunset Pipeline": { "name": "Sunset Pipeline", "city": "" },
-    "Sweet Flower - Arts District": { "name": "Sweet Flower – Arts District", "city": "Los Angeles" },
-    "The Apothecarium Distro": { "match": ["^The Apothecarium"] },
-    "The Artist Tree - WeHo": { "match": ["^The Artist Tree WeHo$"] },
-    "The Bright Spot": { "match": ["^The Bright Spot$"] },
-    "The Cake House (Vista)": { "match": ["^The Cake House Vista$"] },
-    "The Circle": { "name": "The Circle", "city": "" },
-    "The Clinik": { "match": ["^The Clinik$"] },
-    "The Green Door": { "name": "The Green Door", "city": "" },
-    "The Grove": { "match": ["^The Grove$"] },
-    "The Hook Outlet Watsonville": { "name": "The Hook Outlet", "city": "Watsonville" },
-    "The Maven Store": { "match": ["^The Maven Store$"] },
-    "The Ounce": { "match": ["^The Ounce$"] },
-    "The Plant": { "match": ["^The Plant \\(Woodland Hills\\)$"] },
-    "The Plug": { "match": ["^The Plug Napa$"] },
-    "The Pottery": { "match": ["^The Pottery$"] },
-    "The Reef": { "match": ["^The Reef$"] },
-    "The Sweet Spot": { "match": ["^The Sweet Spot - Piner Rd$"] },
-    "The Window": { "name": "The Window", "city": "" },
-    "Theraleaf": { "match": ["^Theraleaf$"] },
-    "Token Farms Farmersville": { "match": ["^Token Farms - Farmersville$"] },
-    "Tradecraft Farms Vista": { "name": "Tradecraft Farms", "city": "Vista" },
-    "Traditional": { "match": ["^Tradit?i?onal"] },
-    "Tree House Cannabis West LA": { "name": "Tree House Cannabis – West LA", "city": "Los Angeles" },
-    "Treehouse": { "name": "Treehouse", "city": "" },
-    "Trees of Echo Park": { "match": ["^Trees of Echo Park$"] },
-    "Urban Smoke - Broadway": { "match": ["^Urban Smoke$"] },
-    "Vallejo Relief Center Distro": { "match": ["^Vallejo Relief Center$"] },
-    "Valley Pure (Farmersville)": { "match": ["^Valley Pure Farmersville LLC$"], "rename": "Valley Pure Farmersville" },
-    "Velvet Cannabis Martinez": { "match": ["^Velvet Cannabis - Martinez$"] },
-    "Vibe Distro": { "match": ["^Vibe "] },
-    "Weeed Sylmar": { "name": "Weeed", "city": "Sylmar" },
-    "Wellgreens Lake Murray": { "match": ["^Wellgreens - Lake Murray$"] },
-    "Wheelhouse - Venice": { "match": ["^Wheelhouse \\(Venice\\)$"] },
-    "Winter Greens Delivery": { "match": ["^Winter Greens Delivery$"] },
-    "Woodland Cannabis Dispensary": { "name": "Woodland Cannabis Dispensary", "city": "Woodland" },
-    "ZZ Flux DTLA": { "name": "ZZ Flux", "city": "Los Angeles" },
-    "Zen Garden Wellness": { "match": ["^Zen Garden"] }
+    "420 Central Costa Mesa": {
+      "match": [
+        "^420 Central - Newport/Costa Mesa$"
+      ]
+    },
+    "420 Kingdom": {
+      "match": [
+        "^420 Kingdom$"
+      ]
+    },
+    "Airfield Supply Co. Redwood City": {
+      "match": [
+        "^Airfield RWC$"
+      ]
+    },
+    "Ashe Society Santa Ana": {
+      "match": [
+        "^Ashe Society$"
+      ],
+      "url": "https://www.ashesociety.com/locations"
+    },
+    "Atrium": {
+      "match": [
+        "^Atrium "
+      ]
+    },
+    "Benzeen La Brea": {
+      "match": [
+        "^Benzeen$"
+      ]
+    },
+    "Big Sur Cannabotanicals": {
+      "match": [
+        "^Big Sur Canna"
+      ]
+    },
+    "BorednStone": {
+      "match": [
+        "^Bored n Stone$"
+      ]
+    },
+    "BudBees Delivery": {
+      "name": "BudBees Delivery",
+      "city": "Los Angeles",
+      "url": "https://budbees.la/"
+    },
+    "Budology": {
+      "name": "Budology",
+      "city": ""
+    },
+    "Buzz Cannabis - Mission Valley": {
+      "name": "Buzz Cannabis – Mission Valley",
+      "city": "San Diego",
+      "url": "https://buzzcannabis.com/about/mission-valley"
+    },
+    "Buzz Delivery": {
+      "name": "Buzz Delivery",
+      "city": "",
+      "url": "https://www.buzzdelivery.org/"
+    },
+    "C.R.A.F.T.": {
+      "match": [
+        "^C\\.R\\.A\\.F\\.T\\.$"
+      ]
+    },
+    "CA Collective": {
+      "match": [
+        "^CA Collective$"
+      ]
+    },
+    "CBCB- Rishon LLC": {
+      "match": [
+        "^Cbcb$"
+      ]
+    },
+    "CEAS Collective": {
+      "name": "CEAS Collective",
+      "city": "",
+      "url": "https://ceascollective.com/"
+    },
+    "Cali Love Weaverville": {
+      "name": "Cali Love",
+      "city": "Weaverville"
+    },
+    "California Street Cannabis Company": {
+      "match": [
+        "^California St\\. Cannabis Company"
+      ]
+    },
+    "Cana Harbor City": {
+      "match": [
+        "^Cana Harbor City$"
+      ]
+    },
+    "CannaCruz - Santa Cruz": {
+      "match": [
+        "^Cannacruz Santa Cruz$"
+      ]
+    },
+    "Cannable Oxnard": {
+      "name": "Cannable",
+      "city": "Oxnard"
+    },
+    "Cannagram Delivery": {
+      "match": [
+        "^Cannagram Delivery$"
+      ]
+    },
+    "Cannavine Ukiah": {
+      "match": [
+        "^Cannavine$"
+      ]
+    },
+    "Capitola Cannabis Club by OFL": {
+      "name": "Capitola Cannabis Club",
+      "city": "Capitola",
+      "url": "https://oakfruitland.com/pages/capitola-dispensaries"
+    },
+    "Catalyst Distribution": {
+      "match": [
+        "^Catalyst - "
+      ]
+    },
+    "Coachella Greenery": {
+      "match": [
+        "^Coachella Greenery$"
+      ]
+    },
+    "Collective Santa Ana": {
+      "name": "Collective",
+      "city": "Santa Ana"
+    },
+    "Cookies - Fashion Valley": {
+      "name": "Cookies – Fashion Valley",
+      "city": "San Diego"
+    },
+    "Cookies Brentwood": {
+      "match": [
+        "^Cookies - Brentwood$"
+      ]
+    },
+    "Cornerstone Research Collective": {
+      "match": [
+        "^Cornerstone Collective$"
+      ]
+    },
+    "Culture Cannabis Distro": {
+      "match": [
+        "^Culture"
+      ]
+    },
+    "Culture Cannabis Jurupa Valley": {
+      "name": "Culture Cannabis",
+      "city": "Jurupa Valley",
+      "url": "https://culturecannabisclub.com/location/jurupa-valley/"
+    },
+    "DIXON WELLNESS": {
+      "match": [
+        "^Dixon Wellness Collective$"
+      ]
+    },
+    "Delta Boyz": {
+      "name": "Delta Boyz",
+      "city": "Isleton",
+      "url": "https://deltaboyz.com/"
+    },
+    "Delta Dispensary": {
+      "name": "Delta Dispensary",
+      "city": "Antioch",
+      "url": "https://www.deltadispensary.net/"
+    },
+    "Dr. Greenthumb - San Diego": {
+      "match": [
+        "^Dr Greenthumb's San Diego$"
+      ]
+    },
+    "EAZE - Hometown Heart - East Bay": {
+      "name": "Hometown Heart (Eaze)",
+      "city": "East Bay"
+    },
+    "Elev8ted Delivery": {
+      "name": "Elev8ted Delivery",
+      "city": ""
+    },
+    "Elevate Lompoc": {
+      "match": [
+        "^Elevate Lompoc$"
+      ]
+    },
+    "Embarc Tahoe": {
+      "match": [
+        "^Embarc Tahoe$"
+      ]
+    },
+    "Embr La Mesa": {
+      "match": [
+        "^EMBR - La Mesa$"
+      ]
+    },
+    "Empire Twin Palms": {
+      "match": [
+        "^Empire - Twin Palms$"
+      ]
+    },
+    "Erb & Arbor": {
+      "match": [
+        "^Erb & Arbor$"
+      ]
+    },
+    "Erba - Sawtelle": {
+      "name": "Erba – Sawtelle",
+      "city": "Los Angeles",
+      "url": "https://www.erbasawtelle.com/"
+    },
+    "Ether": {
+      "match": [
+        "^Ether Cannabis$"
+      ]
+    },
+    "Euphoros": {
+      "match": [
+        "^Euphoros$"
+      ]
+    },
+    "Evergreen SA": {
+      "match": [
+        "^Evergreen$"
+      ]
+    },
+    "Evolv Cannabis": {
+      "name": "Evolv Cannabis",
+      "city": "Lomita",
+      "url": "https://www.evolvcannabis.com/"
+    },
+    "Exotix Distribution": {
+      "match": [
+        "^Exotix"
+      ]
+    },
+    "Flame Santa Rosa": {
+      "match": [
+        "^Flame Dispensary$"
+      ]
+    },
+    "Flight on Cherry": {
+      "name": "Flight on Cherry",
+      "city": "Long Beach",
+      "url": "https://flightoncherry.com/"
+    },
+    "Foothill Health and Wellness": {
+      "match": [
+        "^Foothill Health and Wellness$"
+      ]
+    },
+    "From The Earth SA": {
+      "match": [
+        "^From The Earth Santa Ana$"
+      ]
+    },
+    "Goat Global - Westwood": {
+      "name": "Goat Global – Westwood",
+      "city": "Los Angeles",
+      "url": "https://www.goatglobal.com/"
+    },
+    "Grass Valley Provisions": {
+      "match": [
+        "^Grass Valley Provisions$"
+      ]
+    },
+    "Grasshopper Delivery": {
+      "name": "Grasshopper Delivery",
+      "city": "Chula Vista",
+      "url": "https://ghbuds.com/"
+    },
+    "Green Bean (Woodlake)": {
+      "name": "Green Bean",
+      "city": "Woodlake",
+      "url": "https://www.greenbeanpharm.com/"
+    },
+    "Green Cross of Torrance": {
+      "match": [
+        "^Green Cross of Torrance$"
+      ]
+    },
+    "Green Qween": {
+      "match": [
+        "^Green Qween$"
+      ]
+    },
+    "Greenlight Discount Pharmacy": {
+      "match": [
+        "^Greenlight Discount$"
+      ]
+    },
+    "Harborside Oakland": {
+      "match": [
+        "^Harborside Oakland$"
+      ]
+    },
+    "Haze Almaden": {
+      "name": "Haze – Almaden",
+      "city": "San Jose",
+      "url": "https://haze420.com/menu-ordering/"
+    },
+    "Hello Cannabis": {
+      "match": [
+        "^Hello Cannabis$"
+      ]
+    },
+    "Herb Delivery": {
+      "match": [
+        "^Herb Delivery$"
+      ]
+    },
+    "HiKei San Diego": {
+      "match": [
+        "^Hikei Cannabis - San Diego$"
+      ]
+    },
+    "High Season Adelanto": {
+      "name": "High Season",
+      "city": "Adelanto",
+      "url": "https://www.shophighseason.com/"
+    },
+    "Highway 29": {
+      "match": [
+        "^Highway 29 Health Care$"
+      ]
+    },
+    "Hoover House": {
+      "name": "Hoover House",
+      "city": "Los Angeles",
+      "url": "https://hooverhouseca.com/"
+    },
+    "Horizon": {
+      "name": "Horizon",
+      "city": ""
+    },
+    "Humble Root": {
+      "match": [
+        "^Humble Root$"
+      ]
+    },
+    "Hyperwolf": {
+      "match": [
+        "^Hyperwolf Delivery$"
+      ]
+    },
+    "Instabuds": {
+      "name": "Instabuds",
+      "city": "Costa Mesa",
+      "url": "https://instabuds.com/"
+    },
+    "JETROOM": {
+      "match": [
+        "^Jet Room "
+      ]
+    },
+    "Juva": {
+      "match": [
+        "^Juva "
+      ]
+    },
+    "Kanna": {
+      "name": "Kanna",
+      "city": ""
+    },
+    "Kolas - Distro": {
+      "name": "Kolas",
+      "city": "Sacramento",
+      "url": "https://kolas.com/"
+    },
+    "LA Kush": {
+      "name": "LA Kush",
+      "city": "Los Angeles",
+      "url": "https://lakush.com/"
+    },
+    "Leaf and Lion - Long Beach": {
+      "name": "Leaf and Lion",
+      "city": "Long Beach",
+      "url": "https://leafandlion.com/"
+    },
+    "Legacy Kush": {
+      "name": "Legacy Kush",
+      "city": "Santa Ana",
+      "url": "https://legacykush.com/"
+    },
+    "Legendary Organics Thousand Oaks": {
+      "match": [
+        "^Legendary Organics$"
+      ]
+    },
+    "Lemonnade - Van Nuys": {
+      "name": "Lemonnade",
+      "city": "Van Nuys",
+      "url": "https://lemonnadevannuys.com/"
+    },
+    "Liberty Beach Center": {
+      "match": [
+        "^Liberty Beach Center$"
+      ]
+    },
+    "Long Beach Wellness Center": {
+      "name": "Long Beach Wellness Center",
+      "city": "Long Beach"
+    },
+    "Mainstage Sacramento": {
+      "match": [
+        "^Mainstage$"
+      ]
+    },
+    "Mary Alice": {
+      "match": [
+        "^Mary Alice$"
+      ]
+    },
+    "Mercy Wellness - Cotati": {
+      "match": [
+        "^Mercy Wellness \\(Cotati\\)$"
+      ]
+    },
+    "Mota": {
+      "match": [
+        "^Mota Inc$"
+      ]
+    },
+    "NU Cannabis": {
+      "name": "NU Cannabis",
+      "city": ""
+    },
+    "Natures Story": {
+      "name": "Natures Story",
+      "city": "Woodland Hills"
+    },
+    "Nice Guys Delivery": {
+      "match": [
+        "^Nice Guys Delivery$"
+      ]
+    },
+    "Nug Sacramento": {
+      "match": [
+        "^Nug$"
+      ]
+    },
+    "Oakfruitland Distro": {
+      "name": "Oakfruitland",
+      "city": "Oakland",
+      "url": "https://oakfruitland.com/"
+    },
+    "Off Green": {
+      "name": "Off Green",
+      "city": "Panorama City",
+      "url": "https://offgreenla.com/"
+    },
+    "Off the Charts Palm Springs": {
+      "match": [
+        "^Off The Charts PS$",
+        "^Off The Charts - PS2 Lounge$"
+      ]
+    },
+    "Old G Kush": {
+      "match": [
+        "^Old G Kush$"
+      ]
+    },
+    "One Plant Parent": {
+      "match": [
+        "^One Plant"
+      ]
+    },
+    "Oregrown - Chico": {
+      "match": [
+        "^Oregrown Chico$"
+      ]
+    },
+    "Perfect Union Northside (RCP)": {
+      "match": [
+        "^Perfect Union Northside$"
+      ]
+    },
+    "Phytologie Wellness Center": {
+      "match": [
+        "^Phytologie Wellness Center$"
+      ]
+    },
+    "Platinum Connection": {
+      "match": [
+        "^Platinum Collection$"
+      ],
+      "rename": "Platinum Connection"
+    },
+    "Pure Life Collective": {
+      "match": [
+        "^Pure Life Collective"
+      ]
+    },
+    "Purple Lotus Patient Center": {
+      "match": [
+        "^Purple Lotus"
+      ]
+    },
+    "RISE Pasadena": {
+      "match": [
+        "^RISE Dispensaries Pasadena$"
+      ]
+    },
+    "ReBud NOHO": {
+      "name": "ReBud",
+      "city": "North Hollywood",
+      "url": "https://www.rebud.com/dispensary/north-hollywood"
+    },
+    "Real ZA": {
+      "name": "Real ZA",
+      "city": ""
+    },
+    "Red Moon": {
+      "match": [
+        "^Red Moon$"
+      ]
+    },
+    "Remedy Room": {
+      "match": [
+        "^Remedy Room$"
+      ]
+    },
+    "Root'd 510": {
+      "name": "Root'd 510",
+      "city": "Oakland",
+      "url": "https://rootd510.com/"
+    },
+    "Roots 2 Harvest": {
+      "name": "Roots 2 Harvest",
+      "city": ""
+    },
+    "SLOCAL Roots GB": {
+      "name": "SLOCAL Roots",
+      "city": "Grover Beach",
+      "url": "https://slocalroots.com/grover-beach-dispensary/"
+    },
+    "SPARC - Sonoma": {
+      "name": "SPARC",
+      "city": "Sonoma",
+      "url": "https://sparc.co/dispensary/sparc-sonoma"
+    },
+    "Sacred Roots": {
+      "match": [
+        "^Sacred Roots"
+      ]
+    },
+    "Safeport - Oxnard": {
+      "match": [
+        "^Safeport- Oxnard$"
+      ]
+    },
+    "Sage and Fire": {
+      "match": [
+        "^Sage and Fire$"
+      ]
+    },
+    "Semilla - Herbal Relief Caregivers": {
+      "name": "Semilla",
+      "city": "Sun Valley",
+      "url": "https://semillainc.com/"
+    },
+    "Sessions By The Bay": {
+      "name": "Sessions By The Bay",
+      "city": "National City",
+      "url": "https://sessionsbythebay.com/"
+    },
+    "Stash Dash - Atwater Village": {
+      "match": [
+        "^Stash Dash$"
+      ]
+    },
+    "Sticky Thumb Delivery": {
+      "match": [
+        "^Sticky Thumb Delivery$"
+      ]
+    },
+    "Stiiizy Distro": {
+      "match": [
+        "^STIIIZY"
+      ]
+    },
+    "Stilo Supply": {
+      "match": [
+        "^Stilo Supply$"
+      ]
+    },
+    "Sugarbudz": {
+      "name": "Sugarbudz",
+      "city": "Pacoima"
+    },
+    "Sun Valley Caregivers": {
+      "name": "Sun Valley Caregivers",
+      "city": "Sun Valley"
+    },
+    "Sundial Redding": {
+      "match": [
+        "^Sundial Collective - Redding$"
+      ]
+    },
+    "Sundial Woodland": {
+      "name": "Sundial",
+      "city": "Woodland",
+      "url": "https://www.sundialcollective.com/dispensary-locations/woodland"
+    },
+    "Sunset Pipeline": {
+      "name": "Sunset Pipeline",
+      "city": "San Francisco",
+      "url": "https://www.pipelinedispensary.com/location/sunset-pipeline/"
+    },
+    "Sweet Flower - Arts District": {
+      "name": "Sweet Flower – Arts District",
+      "city": "Los Angeles",
+      "url": "https://sweetflower.com/stores/downtown-los-angeles/"
+    },
+    "The Apothecarium Distro": {
+      "match": [
+        "^The Apothecarium"
+      ]
+    },
+    "The Artist Tree - WeHo": {
+      "match": [
+        "^The Artist Tree WeHo$"
+      ]
+    },
+    "The Bright Spot": {
+      "match": [
+        "^The Bright Spot$"
+      ]
+    },
+    "The Cake House (Vista)": {
+      "match": [
+        "^The Cake House Vista$"
+      ]
+    },
+    "The Circle": {
+      "name": "The Circle",
+      "city": "Long Beach",
+      "url": "https://www.thecirclelbc.com/"
+    },
+    "The Clinik": {
+      "match": [
+        "^The Clinik$"
+      ]
+    },
+    "The Green Door": {
+      "name": "The Green Door",
+      "city": "San Francisco",
+      "url": "https://www.greendoorsf.com/"
+    },
+    "The Grove": {
+      "match": [
+        "^The Grove$"
+      ]
+    },
+    "The Hook Outlet Watsonville": {
+      "name": "The Hook Outlet",
+      "city": "Watsonville",
+      "url": "https://www.hookoutlet.com/locations/watsonville"
+    },
+    "The Maven Store": {
+      "match": [
+        "^The Maven Store$"
+      ]
+    },
+    "The Ounce": {
+      "match": [
+        "^The Ounce$"
+      ]
+    },
+    "The Plant": {
+      "match": [
+        "^The Plant \\(Woodland Hills\\)$"
+      ]
+    },
+    "The Plug": {
+      "match": [
+        "^The Plug Napa$"
+      ]
+    },
+    "The Pottery": {
+      "match": [
+        "^The Pottery$"
+      ]
+    },
+    "The Reef": {
+      "match": [
+        "^The Reef$"
+      ]
+    },
+    "The Sweet Spot": {
+      "match": [
+        "^The Sweet Spot - Piner Rd$"
+      ]
+    },
+    "The Window": {
+      "name": "The Window",
+      "city": "San Francisco"
+    },
+    "Theraleaf": {
+      "match": [
+        "^Theraleaf$"
+      ]
+    },
+    "Token Farms Farmersville": {
+      "match": [
+        "^Token Farms - Farmersville$"
+      ]
+    },
+    "Tradecraft Farms Vista": {
+      "name": "Tradecraft Farms",
+      "city": "Vista",
+      "url": "https://www.tradecraftfarms.com/"
+    },
+    "Traditional": {
+      "match": [
+        "^Tradit?i?onal"
+      ]
+    },
+    "Tree House Cannabis West LA": {
+      "name": "Tree House Cannabis – West LA",
+      "city": "Los Angeles"
+    },
+    "Treehouse": {
+      "name": "Treehouse",
+      "city": ""
+    },
+    "Trees of Echo Park": {
+      "match": [
+        "^Trees of Echo Park$"
+      ]
+    },
+    "Urban Smoke - Broadway": {
+      "match": [
+        "^Urban Smoke$"
+      ]
+    },
+    "Vallejo Relief Center Distro": {
+      "match": [
+        "^Vallejo Relief Center$"
+      ]
+    },
+    "Valley Pure (Farmersville)": {
+      "match": [
+        "^Valley Pure Farmersville LLC$"
+      ],
+      "rename": "Valley Pure Farmersville"
+    },
+    "Velvet Cannabis Martinez": {
+      "match": [
+        "^Velvet Cannabis - Martinez$"
+      ]
+    },
+    "Vibe Distro": {
+      "match": [
+        "^Vibe "
+      ]
+    },
+    "Weeed Sylmar": {
+      "name": "Weeed",
+      "city": "Sylmar"
+    },
+    "Wellgreens Lake Murray": {
+      "match": [
+        "^Wellgreens - Lake Murray$"
+      ]
+    },
+    "Wheelhouse - Venice": {
+      "match": [
+        "^Wheelhouse \\(Venice\\)$"
+      ]
+    },
+    "Winter Greens Delivery": {
+      "match": [
+        "^Winter Greens Delivery$"
+      ]
+    },
+    "Woodland Cannabis Dispensary": {
+      "name": "Woodland Cannabis Dispensary",
+      "city": "Woodland",
+      "url": "https://www.woodlandcannabisdispensary.com/"
+    },
+    "ZZ Flux DTLA": {
+      "name": "ZZ Flux",
+      "city": "Los Angeles",
+      "url": "https://www.zzflux.com/"
+    },
+    "Zen Garden Wellness": {
+      "match": [
+        "^Zen Garden"
+      ]
+    }
   },
   "rename": {
     "The Apothecarium (Berekeley)": "The Apothecarium (Berkeley)",

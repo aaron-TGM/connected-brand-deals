@@ -116,7 +116,7 @@ def main():
                     'a': '' if addr.lower().startswith('delivery service') else addr,
                     'dl': addr.lower().startswith('delivery service') or 'delivery' in name.lower(),
                     'lat': round(float(lat), 5) if lat else None, 'lng': round(float(lng), 5) if lng else None,
-                    'u': strip_utm(s.get('website')), 'flags': set(flags)}
+                    'u': strip_utm(m.get('url') if (m.get('url') and len(stores) == 1) else s.get('website')), 'flags': set(flags)}
         else:
             name = m.get('name', acct)
             sid = re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')[:40] + '-' + hashlib.md5(acct.encode()).hexdigest()[:4]
