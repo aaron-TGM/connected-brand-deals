@@ -7,6 +7,16 @@
     "findProducts": "https://connectedcannabisco.com/pages/find-products",
     "timeZone": "America/Los_Angeles"
   },
+  "states": [
+    {
+      "id": "ca",
+      "name": "California"
+    },
+    {
+      "id": "az",
+      "name": "Arizona"
+    }
+  ],
   "lede": "Connected deals running at California dispensaries and delivery services. Pick your shop to see what it's running, then head there to shop.",
   "finePrint": "Deals are run by each retailer and may vary by location. While supplies last. Prices, dates and participation set by the retailer — check your shop's menu before you go. Adults 21+ with valid ID.",
   "months": {

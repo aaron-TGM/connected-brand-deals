@@ -2,7 +2,7 @@
 """Refresh data/locator.json from the store locator on connectedcannabisco.com/pages/find-products.
 
 The locator (Stockist widget "map_2qzx277q") only returns 100 stores per search, so this tiles
-California with searches and splits any tile that hits the cap. Run it once a month or whenever
+California and Arizona with searches and splits any tile that hits the cap. Run it once a month or whenever
 new shops are added to the locator:
 
     python3 tools/fetch_locator.py
@@ -39,13 +39,15 @@ def tile(lat, lng, radius, depth=0):
             tile(a, b, half * 1.45, depth + 1)
 
 
-lat = 32.5
-while lat <= 42.01:
-    lng = -124.5
-    while lng <= -114:
-        tile(lat, lng, 60)
-        lng += 1.0
-    lat += 1.0
+# California, then Arizona
+for lat0, lat1, lng0, lng1 in [(32.5, 42.01, -124.5, -114), (31.3, 37.01, -114.8, -109)]:
+    lat = lat0
+    while lat <= lat1:
+        lng = lng0
+        while lng <= lng1:
+            tile(lat, lng, 60)
+            lng += 1.0
+        lat += 1.0
 
 keep = ['id', 'name', 'latitude', 'longitude', 'full_address', 'website', 'phone']
 rows = sorted(({k: x.get(k) for k in keep} for x in seen.values()), key=lambda x: (x['name'] or '', x['id']))

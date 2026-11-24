@@ -189,6 +189,33 @@
 "phone": "(818) 905-0420"
 },
 {
+"id": "loc_xgqx72r6",
+"name": "Arizona Cannabis Society",
+"latitude": "33.55535498",
+"longitude": "-112.32501840",
+"full_address": "8376 North El Mirage Road, El Mirage, AZ 85335",
+"website": "https://theazcs.com/daily-deals/",
+"phone": "(888) 249-2927"
+},
+{
+"id": "loc_xgqx72n6",
+"name": "Arizona Natural Concepts",
+"latitude": "33.79865538",
+"longitude": "-112.05911836",
+"full_address": "1039 E Carefree Hwy, Phoenix, AZ 85085",
+"website": "https://ancdispensary.com/",
+"phone": "(602) 224-5999"
+},
+{
+"id": "loc_5zw2meqn",
+"name": "Arizona Organix - Glendale - Rec",
+"latitude": "33.53825495",
+"longitude": "-112.17261838",
+"full_address": "5301 W. Glendale Ave., Glendale, AZ 85301",
+"website": "https://arizonaorganix.org/",
+"phone": "(623) 937-2752"
+},
+{
 "id": "loc_z7pjvzjw",
 "name": "Artist Tree - Oxnard",
 "latitude": "34.20856047",
@@ -414,6 +441,15 @@
 "phone": "(510) 362-7040"
 },
 {
+"id": "loc_p7my28ek",
+"name": "Best Dispensary",
+"latitude": "33.45084100",
+"longitude": "-111.71926000",
+"full_address": "1962 N. Higley Road, Mesa, AZ 85205",
+"website": "https://www.bestdispensary.com/",
+"phone": "(623) 264-2378"
+},
+{
 "id": "loc_8ger7g86",
 "name": "Better Health Group",
 "latitude": "38.12376246",
@@ -520,6 +556,15 @@
 "full_address": "3401 W 8th Street, Los Angeles, CA 90005",
 "website": "https://borednstone.com/",
 "phone": "(213) 302-2411"
+},
+{
+"id": "loc_6jnkxew5",
+"name": "Botanica",
+"latitude": "32.31965295",
+"longitude": "-111.04718194",
+"full_address": "6205 N Travel Center Dr, Tucson, AZ 85741",
+"website": "https://botanica.us/",
+"phone": "(520) 395-0230"
 },
 {
 "id": "loc_9yrx95gy",
@@ -745,6 +790,15 @@
 "full_address": "4645 De Soto St, San Diego, CA 92109",
 "website": "https://gocannabist.com/location/san-diego/",
 "phone": "(858) 324-5130"
+},
+{
+"id": "loc_eqyvm6yv",
+"name": "Cannabist Tempe - MED",
+"latitude": "33.42535476",
+"longitude": "-111.89221833",
+"full_address": "520 S. Prince Rd, Tempe, AZ 85281",
+"website": "https://gocannabist.com/location/tempe/",
+"phone": "(833) 663-7284"
 },
 {
 "id": "loc_8ger7yn6",
@@ -1152,6 +1206,15 @@
 "phone": "(925) 246-9882"
 },
 {
+"id": "loc_kkm2qz9q",
+"name": "Consume Cannabis - Show Low",
+"latitude": "34.26115613",
+"longitude": "-110.02001803",
+"full_address": "1350 N Penrod Rd, Show Low, AZ 85901",
+"website": "https://www.consumecannabis.com/dispensaries/show-low",
+"phone": "(928) 251-4280"
+},
+{
 "id": "loc_p7my2qek",
 "name": "Cookies - Brentwood",
 "latitude": "34.04835578",
@@ -1168,6 +1231,15 @@
 "full_address": "494 W Orange Show Rd, San Bernardino, CA 92408",
 "website": "http://cookiessanbern.com/",
 "phone": "(909) 442-1335"
+},
+{
+"id": "loc_rxzwjgwq",
+"name": "Cookies - Tempe - Tempe - 2715 South Hardy Drive",
+"latitude": "33.39965472",
+"longitude": "-111.95161834",
+"full_address": "2715 South Hardy Drive, Tempe, AZ 85282",
+"website": "https://tempe.cookies.co/?utm_source=gmb&utm_medium=organic",
+"phone": "(480) 378-6917"
 },
 {
 "id": "loc_nxmvwzz5",
@@ -1368,6 +1440,177 @@
 "phone": "(714) 723-0923"
 },
 {
+"id": "loc_wgv8znvx",
+"name": "Curaleaf (AZ) - Scottsdale",
+"latitude": "33.63385511",
+"longitude": "-111.90731833",
+"full_address": "16277 N Greenway Hayden Loop, Scottsdale, AZ 85260",
+"website": "https://curaleaf.com/shop/arizona/curaleaf-dispensary-scottsdale",
+"phone": "(602) 842-0020"
+},
+{
+"id": "loc_2nq8jr89",
+"name": "Curaleaf 48th Street",
+"latitude": "33.40505473",
+"longitude": "-111.97871835",
+"full_address": "4730 South 48th Street, Phoenix, AZ 85040",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(602) 807-5005"
+},
+{
+"id": "loc_nxmvwzp5",
+"name": "Curaleaf Bell",
+"latitude": "33.64155512",
+"longitude": "-112.09931837",
+"full_address": "17201 North 19th Avenue, Phoenix, AZ 85023",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(602) 388-4400"
+},
+{
+"id": "loc_z7pjvn9w",
+"name": "Curaleaf Camelback",
+"latitude": "33.50955490",
+"longitude": "-112.05901836",
+"full_address": "1040 East Camelback Road Ste A, Phoenix, AZ 85014",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(602) 354-3094"
+},
+{
+"id": "loc_gpwyz967",
+"name": "Curaleaf Central",
+"latitude": "33.41665475",
+"longitude": "-112.07301836",
+"full_address": "3333 South Central Avenue, Phoenix, AZ 85040",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(480) 739-0366"
+},
+{
+"id": "loc_z7pjvnpw",
+"name": "Curaleaf Gilbert",
+"latitude": "33.34645463",
+"longitude": "-111.83171832",
+"full_address": "175 South Hamilton Place Ste 110, Gilbert, AZ 85233",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(480) 361-0078"
+},
+{
+"id": "loc_gpwyz957",
+"name": "Curaleaf Glendale",
+"latitude": "33.63935511",
+"longitude": "-112.17911838",
+"full_address": "5558 West Bell Road, Glendale, AZ 85308",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(602) 535-0999"
+},
+{
+"id": "loc_v59jxwkm",
+"name": "Curaleaf Pavilions",
+"latitude": "33.47054838",
+"longitude": "-112.23751839",
+"full_address": "2175 N 83rd Ave, Phoenix, AZ 85035",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(623)244-5349"
+},
+{
+"id": "loc_9yrx9w2y",
+"name": "Curaleaf Peoria",
+"latitude": "33.56595499",
+"longitude": "-112.25531839",
+"full_address": "8970 North 91st Avenue, Peoria, AZ 85345",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(623) 233-1010"
+},
+{
+"id": "loc_nxmvwzv5",
+"name": "Curaleaf Phoenix Airport",
+"latitude": "33.44945480",
+"longitude": "-111.98671835",
+"full_address": "4415 East Monroe Street, Phoenix, AZ 85034",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(602) 396-5757"
+},
+{
+"id": "loc_jzenvw8e",
+"name": "Curaleaf Queen Creek",
+"latitude": "33.21154414",
+"longitude": "-111.68471830",
+"full_address": "18423 East San Tan Boulevard, Queen Creek, AZ 85142",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(480) 550-9121"
+},
+{
+"id": "loc_nxmvwzm5",
+"name": "Curaleaf Scottsdale",
+"latitude": "33.63385511",
+"longitude": "-111.90731833",
+"full_address": "16277 North Greenway Hayden Loop, Scottsdale, AZ 85260",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(602) 842-0020"
+},
+{
+"id": "loc_v59jxwym",
+"name": "Curaleaf Sedona",
+"latitude": "34.87375714",
+"longitude": "-111.76141831",
+"full_address": "465 Jordan Road, Sedona, AZ 86336",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(928) 202-3512"
+},
+{
+"id": "loc_9yrx9wgy",
+"name": "Curaleaf Tucson Oracle",
+"latitude": "32.29175291",
+"longitude": "-110.97921818",
+"full_address": "4695 North Oracle Road, Tucson, AZ 85705",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(520) 293-3315"
+},
+{
+"id": "loc_kkm2qzeq",
+"name": "Curaleaf Youngtown",
+"latitude": "33.60465506",
+"longitude": "-112.30061840",
+"full_address": "11200 West Michigan Avenue, Youngtown, AZ 85363",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(623) 444-5977"
+},
+{
+"id": "loc_qxmpey2y",
+"name": "Cureleaf Glendale East",
+"latitude": "33.65365514",
+"longitude": "-112.23491839",
+"full_address": "8160 W Union Hills Dr, Glendale, AZ 85308",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(623) 385-1310"
+},
+{
+"id": "loc_jzenvw9e",
+"name": "Cureleaf Midtown",
+"latitude": "33.48105486",
+"longitude": "-112.07421836",
+"full_address": "2918 North Central Avenue, Phoenix, AZ 85012",
+"website": "https://curaleaf.com/dispensary/arizona",
+"phone": "(602) 466-1087"
+},
+{
+"id": "loc_5zw2menn",
+"name": "D2 Dispensary Cannabis Destination + Drive Thru - Medical",
+"latitude": "32.20765277",
+"longitude": "-110.83961816",
+"full_address": "7139 E 22nd St., Tucson, AZ 85710",
+"website": "https://d2dispensary.com/east/",
+"phone": "(520) 214-3232"
+},
+{
+"id": "loc_ywyr98qv",
+"name": "D2 Dispensary Downtown Cannabis Gallery - Medical",
+"latitude": "32.22795280",
+"longitude": "-110.96811818",
+"full_address": "221 East 6th Street, Tucson, AZ 85705",
+"website": "http://thedowntowndispensary.com/",
+"phone": "(415) 449-4729"
+},
+{
 "id": "loc_kkm2q6mq",
 "name": "DC Collective",
 "latitude": "34.21685606",
@@ -1393,6 +1636,15 @@
 "full_address": "2121 2Nd St., Davis, CA 95618",
 "website": "http://daviscannabisco.com/",
 "phone": "(530) 747-2057"
+},
+{
+"id": "loc_z7pjvnew",
+"name": "Deeply Rooted Boutique Cannabis Company",
+"latitude": "33.60955066",
+"longitude": "-112.31401840",
+"full_address": "11725 NW Grand Ave, El Mirage, AZ 85335",
+"website": "https://azdeeplyrooted.com/",
+"phone": "(623) 252-0004"
 },
 {
 "id": "loc_gpwyz2j7",
@@ -1438,6 +1690,15 @@
 "full_address": "Delivery Service, Los Angeles,CA",
 "website": "https://weedmaps.com/deliveries/greenmoon-cannabis-co",
 "phone": "(213) 267-8822"
+},
+{
+"id": "loc_mgx9p8qv",
+"name": "Desert Bloom Re Leaf Center",
+"latitude": "32.20595277",
+"longitude": "-110.82071816",
+"full_address": "8060 E 22nd St, Suite 108, Tucson, AZ 85714",
+"website": "https://www.dbloomtucson.com/",
+"phone": "(520) 886-1760"
 },
 {
 "id": "loc_xgqx7pp6",
@@ -1555,6 +1816,24 @@
 "full_address": "2550 Oak St, Napa, CA 94559",
 "website": "http://eagleeyenapa.com/",
 "phone": "(707) 637-4699"
+},
+{
+"id": "loc_8ger7526",
+"name": "Earth's Healing (North)",
+"latitude": "32.25625285",
+"longitude": "-110.98771818",
+"full_address": "2727 N Fairview Ave, Tucson, AZ 85705",
+"website": "https://earthshealing.org/",
+"phone": "(520) 253-7198"
+},
+{
+"id": "loc_wgv8zn9x",
+"name": "Earth's Healing (South)",
+"latitude": "32.16695270",
+"longitude": "-110.94071818",
+"full_address": "2075 E. Benson Highway, Tucson, AZ 85714",
+"website": "https://earthshealing.org/menu-south/",
+"phone": "(520) 373-5779"
 },
 {
 "id": "loc_2nq8jne9",
@@ -2214,6 +2493,15 @@
 "phone": "(415) 590-7538"
 },
 {
+"id": "loc_2nq8jr99",
+"name": "Giving Tree Dispensary (MED)",
+"latitude": "33.65415514",
+"longitude": "-112.08321836",
+"full_address": "701 W. Union Hills Drive, Phoenix, AZ 85027",
+"website": "https://givingtreedispensary.com/",
+"phone": "(623) 242-9080"
+},
+{
 "id": "loc_7v2r8vmq",
 "name": "Golden Gate Cannabis Company",
 "latitude": "37.78561909",
@@ -2313,6 +2601,24 @@
 "phone": "(760) 894-3146"
 },
 {
+"id": "loc_mgx9p8wv",
+"name": "Green Pharms Dispensary Flagstaff (Med/Rec)",
+"latitude": "35.24145774",
+"longitude": "-111.56931828",
+"full_address": "7121 US-89, Flagstaff, AZ 86004",
+"website": "https://greenpharms.com/",
+"phone": "(928) 522-6337"
+},
+{
+"id": "loc_gpwyz977",
+"name": "Green Pharms Dispensary Mesa (Med/Rec)",
+"latitude": "33.38871547",
+"longitude": "-111.67651183",
+"full_address": "7235 E Hampton Ave, Mesa, AZ 85209",
+"website": "https://greenpharms.com/",
+"phone": "(833) 663-7284"
+},
+{
 "id": "loc_gpwyz2z7",
 "name": "Green Qween",
 "latitude": "34.04055771",
@@ -2394,6 +2700,33 @@
 "phone": "(510) 561-7355"
 },
 {
+"id": "loc_jzenvw7e",
+"name": "Halo Cannabis",
+"latitude": "32.11255261",
+"longitude": "-110.85831816",
+"full_address": "7710 S. Wilmot Rd., Tucson, AZ 85756",
+"website": "https://www.thegreenhalo.com/",
+"phone": "(520) 664-2251"
+},
+{
+"id": "loc_rxzwjg8q",
+"name": "Hana Meds - Green Valley (MED)",
+"latitude": "31.89685226",
+"longitude": "-111.00281819",
+"full_address": "1732 W Commerce Point PL, Green Valley, AZ 85614",
+"website": "https://hanadispensaries.com/location/green-valley-az/?utm_source=gmb&utm_medium=organic",
+"phone": "(520) 289-8030"
+},
+{
+"id": "loc_ywyr98rv",
+"name": "Hana Meds - Phoenix (REC)",
+"latitude": "33.40525473",
+"longitude": "-112.00761835",
+"full_address": "3411 E. Corona Ave., Phoenix, AZ 85040",
+"website": "https://hanadispensaries.com/?utm_source=gmb&utm_medium=organic",
+"phone": "(602) 491-0420"
+},
+{
 "id": "loc_2nq8jrr9",
 "name": "Harbor Collective",
 "latitude": "32.69211536",
@@ -2455,6 +2788,15 @@
 "full_address": "1201 Mono Way, Sonora, CA 95370",
 "website": "https://www.hazybulldogdispensary.com/",
 "phone": "(209) 536-4208"
+},
+{
+"id": "loc_wgv8znpx",
+"name": "Health for Life - McDowell",
+"latitude": "33.46735483",
+"longitude": "-111.71011830",
+"full_address": "5550 East McDowell Road, Mesa, AZ 85215",
+"website": "https://healthforlifeaz.com/mcdowell/",
+"phone": "(480) 830-8251"
 },
 {
 "id": "loc_7v2r855q",
@@ -2727,6 +3069,42 @@
 "phone": "(760) 699-7935"
 },
 {
+"id": "loc_v59jxwjm",
+"name": "JARS - Arcadia",
+"latitude": "33.48254857",
+"longitude": "-112.02918355",
+"full_address": "3001 N 24th Street, Phoenix, Arizona, 85016",
+"website": "https://jarscannabis.com/",
+"phone": "(480) 504-0604"
+},
+{
+"id": "loc_rxzwjg9q",
+"name": "JARS - Cave Creek",
+"latitude": "33.60145505",
+"longitude": "-112.03781836",
+"full_address": "12620 North Cave Creek Rd, Phoenix, Arizona, 85022",
+"website": "https://jarscannabis.com/",
+"phone": "(480) 939-4002"
+},
+{
+"id": "loc_mgx9p8zv",
+"name": "JARS - El Mirage",
+"latitude": "33.62267400",
+"longitude": "-112.33231600",
+"full_address": "12555 Northwest Grand Avenue Unit B, El Mirage, Arizona, 85335",
+"website": "https://jarscannabis.com/",
+"phone": "(602) 351-5450"
+},
+{
+"id": "loc_gpwyz9m7",
+"name": "JARS - Globe",
+"latitude": "33.41180547",
+"longitude": "-110.84257182",
+"full_address": "2250 US-60, Globe, Arizona, 85501",
+"website": "https://jarscannabis.com/",
+"phone": "(928) 793-5994"
+},
+{
 "id": "loc_2nq8jrz9",
 "name": "JARS - Kingman",
 "latitude": "35.25457761",
@@ -2734,6 +3112,78 @@
 "full_address": "1975 E Northern Ave, Kingman, Arizona, 86409",
 "website": "https://jarscannabis.com/",
 "phone": "(928) 263-6348"
+},
+{
+"id": "loc_ywyr98nv",
+"name": "JARS - Mesa",
+"latitude": "33.38254695",
+"longitude": "-111.74261831",
+"full_address": "4236 E Juanita Ave, Mesa, Arizona, 85206",
+"website": "https://jarscannabis.com/",
+"phone": "(480) 420-0064"
+},
+{
+"id": "loc_rxzwjg5q",
+"name": "JARS - Metrocenter",
+"latitude": "33.57805501",
+"longitude": "-112.12491837",
+"full_address": "10040 North Metro Parkway West, Phoenix, AZ",
+"website": "https://jarscannabis.com/",
+"phone": "(602) 870-8700"
+},
+{
+"id": "loc_xgqx72m6",
+"name": "JARS - New River",
+"latitude": "33.90855556",
+"longitude": "-112.14151837",
+"full_address": "46639 N Black Canyon Road, Suite 1, Arizona, Arizona",
+"website": "https://jarscannabis.com/",
+"phone": "(623) 936-9333"
+},
+{
+"id": "loc_7v2r85wq",
+"name": "JARS - North Phoenix",
+"latitude": "33.67095517",
+"longitude": "-112.11791837",
+"full_address": "20224 North 27th Avenue, Phoenix, Arizona, 85027",
+"website": "https://jarscannabis.com/",
+"phone": "(623) 562-1059"
+},
+{
+"id": "loc_z7pjvn2w",
+"name": "JARS - Payson",
+"latitude": "34.24105610",
+"longitude": "-111.32251824",
+"full_address": "100 SR-260 W,, Payson, Arizona, 85541",
+"website": "https://jarscannabis.com/",
+"phone": "(928) 474-2420"
+},
+{
+"id": "loc_6jnkxeq5",
+"name": "JARS - Peoria",
+"latitude": "33.66855516",
+"longitude": "-112.28018396",
+"full_address": "20340 N Lake Pleasant Rd, Peoria, Arizona, 85382",
+"website": "https://jarscannabis.com/",
+"phone": "(623) 246-1065"
+},
+{
+"id": "loc_9yrx9wxy",
+"name": "JARS - Phoenix Airport",
+"latitude": "33.42515476",
+"longitude": "-112.03091836",
+"full_address": "2424 South 24th Street, Phoenix, Arizona, 85034",
+"website": "https://jarscannabis.com/",
+"phone": "(602) 675-6999"
+},
+{
+"id": "loc_rxzwjg2q",
+"name": "JARS - Safford",
+"latitude": "32.83475380",
+"longitude": "-109.72991798",
+"full_address": "1809 West Thatcher Boulevard, Safford, Arizona, 85546",
+"website": "https://jarscannabis.com/",
+"phone": "(928) 424-1313"
 },
 {
 "id": "loc_qxmpeyry",
@@ -2842,6 +3292,24 @@
 "full_address": "2019 MacArthur Blvd,, Oakland, CA 94602",
 "website": "https://kannaoak.com/",
 "phone": "(510) 447-1706"
+},
+{
+"id": "loc_8ger75j6",
+"name": "Key Cannabis Dispensary Springerville",
+"latitude": "34.13235592",
+"longitude": "-109.27351790",
+"full_address": "900 E Main St, Springerville, AZ 85938",
+"website": "https://keycannabis.com/shop/springerville-az/?utm_source=terrayn_gbp&utm_medium=organic&utm_campaign=springerville",
+"phone": "(928) 719-7200"
+},
+{
+"id": "loc_5zw2mewn",
+"name": "Kind Meds (AZ)",
+"latitude": "33.37525468",
+"longitude": "-111.84461832",
+"full_address": "2152 S. Vineyard St., Mesa, AZ 85210",
+"website": "https://kindmedsaz.com/",
+"phone": "(833) 663-7284"
 },
 {
 "id": "loc_z7pjvnxw",
@@ -3085,6 +3553,15 @@
 "full_address": "1201 N Mission Rd, Los Angeles, CA 90033",
 "website": "https://loopysanchez.com/",
 "phone": "(213) 792-2734"
+},
+{
+"id": "loc_xgqx72v6",
+"name": "LunchBox Dispensary",
+"latitude": "31.68065191",
+"longitude": "-110.64971813",
+"full_address": "3270 AZ-82, Sonoita, AZ 85637",
+"website": "https://lunchboxdispensary.com/",
+"phone": "(520) 524-4414"
 },
 {
 "id": "loc_6jnkx955",
@@ -3420,6 +3897,24 @@
 "phone": "(323) 871-9500"
 },
 {
+"id": "loc_kkm2qzyq",
+"name": "Nature Med - Tucson",
+"latitude": "32.33815298",
+"longitude": "-111.07971820",
+"full_address": "5390 West Ina Road, Tucson, AZ 85743",
+"website": "https://naturemedaz.com/",
+"phone": "(520) 620-9123"
+},
+{
+"id": "loc_8ger75w6",
+"name": "Nature's Wonder Dispensary - Phoenix - REC",
+"latitude": "33.48005485",
+"longitude": "-112.12111837",
+"full_address": "2825 W Thomas Rd., Phoenix, AZ 85017",
+"website": "https://natureswonderaz.com/our-locations/phoenix-dispensary?utm_source=terrayn_gbp&utm_medium=organic&utm_campaign=phoenix_thomas",
+"phone": "(602) 837-5660"
+},
+{
 "id": "loc_gpwyz2w7",
 "name": "Natures Spot - Woodland Hills",
 "latitude": "34.18790700",
@@ -3445,6 +3940,51 @@
 "full_address": "Delivery Service, SAN RAFAEL,CA",
 "website": "https://www.niceguysdelivery.com/",
 "phone": "(415) 855-5914"
+},
+{
+"id": "loc_6jnkxey5",
+"name": "Nirvana Cannabis",
+"latitude": "33.44829500",
+"longitude": "-112.13504600",
+"full_address": "2 N. 35th Ave., Phoenix, AZ 85009",
+"website": "https://www.nirvanacenter.com/arizona/phoenix",
+"phone": "(602) 730-3236"
+},
+{
+"id": "loc_ywyr98mv",
+"name": "Nirvana Cannabis - 75th Ave (West Phoenix)",
+"latitude": "33.47425484",
+"longitude": "-112.22161839",
+"full_address": "2330 N. 75th Ave., Phoenix, AZ 85035",
+"website": "https://www.nirvanacenter.com/arizona/west-phoenix",
+"phone": "(602) 786-7988"
+},
+{
+"id": "loc_5zw2meyn",
+"name": "Nirvana Cannabis - 7th St (Downtown Phoenix)",
+"latitude": "33.43715478",
+"longitude": "-112.06471836",
+"full_address": "702 East Buckeye Road, Phoenix, AZ 85034",
+"website": "https://www.nirvanacenter.com/arizona/downtown-phoenix-%287th%29",
+"phone": "(602) 932-8865"
+},
+{
+"id": "loc_5zw2mepn",
+"name": "Nirvana Cannabis - Apache Junction",
+"latitude": "33.41465475",
+"longitude": "-111.58518282",
+"full_address": "11343 E. Apache Trail, Apache Junction, AZ 85120",
+"website": "https://www.nirvanacenter.com/arizona/apache-junction",
+"phone": "(480) 498-4466"
+},
+{
+"id": "loc_jzenvw2e",
+"name": "Nirvana Prescott",
+"latitude": "34.58175666",
+"longitude": "-112.35471841",
+"full_address": "6287 E Copper Hill Dr. Ste A, Prescott, AZ 86314",
+"website": "https://www.nirvanacenter.com/arizona/prescott-valley",
+"phone": "(928) 227-2441"
 },
 {
 "id": "loc_kkm2q6jq",
@@ -3915,6 +4455,24 @@
 "phone": "(209) 554-0802"
 },
 {
+"id": "loc_kkm2qz5q",
+"name": "PRC by Sunday Goods",
+"latitude": "33.38906700",
+"longitude": "-112.13647800",
+"full_address": "6330 S 35th Ave #104, Phoenix, AZ 85041",
+"website": "https://sundaygoods.com/",
+"phone": "(602) 276-3401"
+},
+{
+"id": "loc_z7pjvnmw",
+"name": "PRC by Sunday Goods",
+"latitude": "33.38915470",
+"longitude": "-112.13651837",
+"full_address": "6330 South 35th Avenue, Phoenix, AZ 85041",
+"website": "https://sundaygoods.com/",
+"phone": "(602) 276-3401"
+},
+{
 "id": "loc_ywyr9z2v",
 "name": "Packs",
 "latitude": "38.02056229",
@@ -4266,6 +4824,15 @@
 "phone": "(213) 340-6079"
 },
 {
+"id": "loc_eqyvm68v",
+"name": "SWC Prescott - REC",
+"latitude": "34.55485661",
+"longitude": "-112.46818427",
+"full_address": "123 Merritt St., Prescott, AZ 86301",
+"website": "https://swcarizona.com/",
+"phone": "(800) 456-2455"
+},
+{
 "id": "loc_nxmvw925",
 "name": "Sacred Roots - Taxes Included in Prices!",
 "latitude": "38.72976345",
@@ -4356,6 +4923,51 @@
 "phone": "(323) 672-8383"
 },
 {
+"id": "loc_p7my28nk",
+"name": "Sol Flower - Deer Valley (MED)",
+"latitude": "33.68665519",
+"longitude": "-112.10801837",
+"full_address": "22041 N 23rd Ave, Phoenix, AZ 85027",
+"website": "https://www.livewithsol.com/locations/deer-valley/?utm_source=gmb&utm_medium=organic",
+"phone": "(602) 390-1044"
+},
+{
+"id": "loc_p7my28mk",
+"name": "Sol Flower - Scottsdale Airpark (MED)",
+"latitude": "33.62115508",
+"longitude": "-111.90911834",
+"full_address": "14980 N 78th Way, Scottsdale, AZ 85260",
+"website": "https://www.livewithsol.com/menu/scottsdale-airpark-recreational/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb-listing",
+"phone": "(480) 420-3300"
+},
+{
+"id": "loc_ywyr98yv",
+"name": "Sol Flower - Tempe McClintock (MED)",
+"latitude": "33.44365479",
+"longitude": "-111.90991834",
+"full_address": "1322 N McClintock Dr, Tempe, AZ 85281",
+"website": "https://www.livewithsol.com/locations/tempe-mcclintock/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb-listing",
+"phone": "(480) 795-6363"
+},
+{
+"id": "loc_gpwyz9y7",
+"name": "Sol Flower - Tempe University (MED)",
+"latitude": "33.42265476",
+"longitude": "-111.97491835",
+"full_address": "2424 West University Drive, Tempe, AZ",
+"website": "https://www.livewithsol.com/locations/tempe-university/",
+"phone": "(480) 664-2017"
+},
+{
+"id": "loc_8ger75p6",
+"name": "Sol Flower Dispensary Sun City",
+"latitude": "33.60815506",
+"longitude": "-112.26861839",
+"full_address": "13650 N 99th Ave, Sun City, AZ 85351-2861",
+"website": "https://www.livewithsol.com/locations/sun-city/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb-listing",
+"phone": "(623) 246-8080"
+},
+{
 "id": "loc_kkm2q6zq",
 "name": "South Sacramento Care Center",
 "latitude": "38.50863093",
@@ -4390,6 +5002,15 @@
 "full_address": "3176 Glendale Blvd, Los Angeles, CA",
 "website": "https://stashdash.com/",
 "phone": "(323) 372-9709"
+},
+{
+"id": "loc_rxzwjgzq",
+"name": "Sticky Saguaro (Med/Rec)",
+"latitude": "33.21958300",
+"longitude": "-111.81607100",
+"full_address": "12338 EAST RIGGS RD, Chandler, AZ 85249",
+"website": "https://stickysaguaro.com/",
+"phone": "(602) 644-9188"
 },
 {
 "id": "loc_ywyr9w9v",
@@ -4824,6 +5445,24 @@
 "phone": "(310) 935-2600"
 },
 {
+"id": "loc_nxmvwz55",
+"name": "Story Cannabis Bell Glendale",
+"latitude": "33.63865511",
+"longitude": "-112.20211838",
+"full_address": "6676 W Bell Rd, Glendale, AZ 85308",
+"website": "https://storycannabis.com/dispensary-locations/arizona/glendale-dispensary/",
+"phone": "(638) 353-1419"
+},
+{
+"id": "loc_6jnkxe25",
+"name": "Story Cannabis Bisbee",
+"latitude": "31.39945144",
+"longitude": "-109.91871801",
+"full_address": "1191 South Naco Highway, Bisbee, AZ 85603",
+"website": "https://storycannabis.com/",
+"phone": "(520) 727-7754"
+},
+{
 "id": "loc_wgv8znxx",
 "name": "Story Cannabis Bullhead City",
 "latitude": "35.05265743",
@@ -4833,12 +5472,75 @@
 "phone": "(928) 324-6062"
 },
 {
+"id": "loc_eqyvm6jv",
+"name": "Story Cannabis Dunlap",
+"latitude": "33.71125523",
+"longitude": "-112.08171836",
+"full_address": "24905 N 7th Ave, Phoenix, AZ 85085",
+"website": "https://storycannabis.com/dispensary-locations/arizona/dunlap-az/",
+"phone": "(602) 903-3769"
+},
+{
+"id": "loc_mgx9p89v",
+"name": "Story Cannabis North Chandler",
+"latitude": "33.29275455",
+"longitude": "-111.97041835",
+"full_address": "17006 S Weber Drive, Chandler, AZ 85226-4113",
+"website": "https://storycannabis.com/dispensary-locations/arizona/north-chandler-dispensary/",
+"phone": "(480) 626-7333"
+},
+{
+"id": "loc_xgqx72q6",
+"name": "Story Cannabis South Chandles",
+"latitude": "33.20575440",
+"longitude": "-111.84071832",
+"full_address": "26427 S Arizona Ave, Chandler, AZ 85248",
+"website": "https://storycannabis.com/dispensary-locations/arizona/south-chandler-dispensary/",
+"phone": "(602) 903-3665"
+},
+{
+"id": "loc_wgv8znrx",
+"name": "Story Grand Glendale",
+"latitude": "33.55605498",
+"longitude": "-112.20531838",
+"full_address": "6840 West Grand Ave, Glendale, AZ 85301",
+"website": "https://storycannabis.com/",
+"phone": "(623) 301-8478"
+},
+{
 "id": "loc_nxmvwz25",
 "name": "Story Lake Havasu",
 "latitude": "34.47695649",
 "longitude": "-114.35031874",
 "full_address": "200 London Bridge Road, Lake Havasu City, AZ 86403",
 "website": "https://storycannabis.com/",
+"phone": "(833) 663-7284"
+},
+{
+"id": "loc_qxmpey7y",
+"name": "Story McDowell",
+"latitude": "33.46515483",
+"longitude": "-112.11251837",
+"full_address": "2439 W. McDowell Rd., Phoenix, AZ 85009",
+"website": "https://storycannabis.com/",
+"phone": "(623) 301-8563"
+},
+{
+"id": "loc_rxzwjgrq",
+"name": "Story Tolleson",
+"latitude": "33.46315483",
+"longitude": "-112.27141839",
+"full_address": "9897 W Mcdowell Rd, Tolleson, AZ 85353",
+"website": "https://storycannabis.com/dispensary-locations/arizona/tolleson-dispensary/",
+"phone": "(623) 301-8563"
+},
+{
+"id": "loc_jzenvw6e",
+"name": "Story of Arizona - Williams",
+"latitude": "35.25205776",
+"longitude": "-112.18411838",
+"full_address": "341 East Route 66, Williams, AZ 86046",
+"website": "https://storycannabis.com/dispensary-locations/arizona/williams-dispensary/",
 "phone": "(833) 663-7284"
 },
 {
@@ -4867,6 +5569,24 @@
 "full_address": "Delivery Service, Goleta, CA",
 "website": "https://sublimedelivery.com/?meadowPath=%2Fpick-menu&meadowQuery=mdwCb%3D%252Forganizations%252F1518%253FembedUrl%253Dhttps%25253A%25252F%25252Fsublimedelivery.com%25252F%25253F%2526isGoDaddy%253Dfalse%2526isInIframe%253Dtrue%2526mdw_fp%253D04c4748332f7f8",
 "phone": "(805) 232-3446"
+},
+{
+"id": "loc_6jnkxep5",
+"name": "Sunday Goods - North Central Phoenix",
+"latitude": "33.53855495",
+"longitude": "-112.04681836",
+"full_address": "1616 E Glendale Ave, Phoenix, AZ 85020",
+"website": "https://sundaygoods.com/",
+"phone": "(480) 581-5149"
+},
+{
+"id": "loc_9yrx9wry",
+"name": "Sunday Goods - Tempe",
+"latitude": "33.43795478",
+"longitude": "-111.92581834",
+"full_address": "723 N Scottsdale Rd, Tempe, AZ 85288",
+"website": "https://sundaygoods.com/",
+"phone": "(480) 702-0812"
 },
 {
 "id": "loc_mgx9pgrv",
@@ -5094,6 +5814,24 @@
 "phone": "(707) 630-4024"
 },
 {
+"id": "loc_5zw2me2n",
+"name": "The Flower Shop - Ahwatukee",
+"latitude": "33.34835464",
+"longitude": "-111.97418346",
+"full_address": "10827 S 51ST ST, Phoenix, AZ 85044",
+"website": "https://theflowershopusa.com/ahwatukee",
+"phone": "(480) 500-5054"
+},
+{
+"id": "loc_jzenvwee",
+"name": "The Good Dispensary",
+"latitude": "33.40895474",
+"longitude": "-111.87131833",
+"full_address": "1842 W Broadway, Mesa, AZ 85202",
+"website": "https://thegooddispensary.com/",
+"phone": "(833) 663-7284"
+},
+{
 "id": "loc_2nq8jrx9",
 "name": "The Grove",
 "latitude": "32.77152537",
@@ -5128,6 +5866,51 @@
 "full_address": "66321 Pierson Blvd, DSRT Hot SPGS, CA 92240",
 "website": "http://www.themicrobuddery.com/",
 "phone": "(760) 904-2910"
+},
+{
+"id": "loc_p7my285k",
+"name": "The Mint - 75th Ave",
+"latitude": "33.46155482",
+"longitude": "-112.21991839",
+"full_address": "1211 N 75th Ave, Phoenix, AZ, 85043",
+"website": "https://themintcannabis.com/",
+"phone": "(480)749-6468"
+},
+{
+"id": "loc_7v2r85rq",
+"name": "The Mint - Bell Rd",
+"latitude": "33.64135512",
+"longitude": "-112.03121836",
+"full_address": "17036 N Cave Creek Rd, Phoenix, AZ, 85032",
+"website": "https://themintcannabis.com/",
+"phone": "(480) 749-6468"
+},
+{
+"id": "loc_6jnkxen5",
+"name": "The Mint - Mesa",
+"latitude": "33.39357800",
+"longitude": "-111.82409200",
+"full_address": "330 E Southern Ave, Mesa, AZ, 85210",
+"website": "https://themintcannabis.com/",
+"phone": "(480) 749-6468"
+},
+{
+"id": "loc_ywyr987v",
+"name": "The Mint - Northern",
+"latitude": "33.55345497",
+"longitude": "-112.11151837",
+"full_address": "2444 W Northern Ave, Phoenix, AZ, 85021",
+"website": "https://themintcannabis.com/",
+"phone": "(480)749-6468"
+},
+{
+"id": "loc_6jnkxek5",
+"name": "The Mint - Tempe",
+"latitude": "33.37715469",
+"longitude": "-111.96371834",
+"full_address": "5210 S Priest Dr, Guadalupe, AZ, 85283",
+"website": "https://themintcannabis.com/",
+"phone": "(480) 749-6468"
 },
 {
 "id": "loc_eqyvmxnv",
@@ -5191,6 +5974,24 @@
 "full_address": "836 Hobsonway E, Blythe, CA 92225",
 "website": "https://www.theprimeleafblythe.com/",
 "phone": "(760) 710-2227"
+},
+{
+"id": "loc_2nq8jry9",
+"name": "The Prime Leaf - Tucson Speedway Blvd",
+"latitude": "32.23585282",
+"longitude": "-110.90251817",
+"full_address": "4220 E. Speedway Blvd., Tucson, AZ 85712",
+"website": "https://theprimeleaf.com/",
+"phone": "(520) 447-7463"
+},
+{
+"id": "loc_p7my28wk",
+"name": "The Prime Leaf - University",
+"latitude": "32.24125282",
+"longitude": "-110.95721818",
+"full_address": "1525 N Park Ave, Tucson, AZ 85719",
+"website": "https://theprimeleaf.com/",
+"phone": "(520) 447-7463"
 },
 {
 "id": "loc_5zw2m77n",
@@ -5407,6 +6208,321 @@
 "full_address": "Delivery Service, Oakland,CA",
 "website": "https://www.truedeliveries.com/",
 "phone": "(510) 219-9782"
+},
+{
+"id": "loc_gpwyz9x7",
+"name": "Trulieve - Avondale",
+"latitude": "33.45054806",
+"longitude": "-112.34288184",
+"full_address": "325 N Dysart Rd Suite A, Avondale, AZ 85323",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_qxmpeyjy",
+"name": "Trulieve - Casa Grande",
+"latitude": "32.90364100",
+"longitude": "-111.75716300",
+"full_address": "1860 N Pinal Ave, Casa Grande, AZ 85122",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_7v2r852q",
+"name": "Trulieve - Cave Creek",
+"latitude": "33.83155429",
+"longitude": "-111.93441834",
+"full_address": "6811 E Cave Creek Rd, Cave Creek, AZ 85331",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_kkm2qz2q",
+"name": "Trulieve - Chandler",
+"latitude": "33.30595457",
+"longitude": "-111.96451834",
+"full_address": "7100 W Chandler Blvd Suite 2, Chandler, AZ 85226",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_kkm2qzmq",
+"name": "Trulieve - Gilbert",
+"latitude": "33.36285100",
+"longitude": "-111.82427100",
+"full_address": "723 N McQueen Rd Suite 155, Gilbert, AZ 85233",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_2nq8jr79",
+"name": "Trulieve - Glendale",
+"latitude": "33.67022000",
+"longitude": "-112.18686400",
+"full_address": "20340 N 59th Ave Suite 101, Glendale, AZ 85308",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_7v2r85nq",
+"name": "Trulieve - Mesa",
+"latitude": "33.38255469",
+"longitude": "-111.81091832",
+"full_address": "938 E Juanita Ave, Mesa, AZ 85204",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_jzenvwne",
+"name": "Trulieve - North Phoenix",
+"latitude": "33.63815511",
+"longitude": "-111.97731835",
+"full_address": "16635 N Tatum Blvd Suite 100, Phoenix, AZ 85032",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_kkm2qzvq",
+"name": "Trulieve - Phoenix (Camelback)",
+"latitude": "33.50906400",
+"longitude": "-112.04742500",
+"full_address": "1613 E Camelback Rd, Phoenix, AZ 85016",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_v59jxwpm",
+"name": "Trulieve - Phoenix (McDowell)",
+"latitude": "33.46454829",
+"longitude": "-112.11495184",
+"full_address": "2620 W McDowell Rd, Phoenix, AZ 85009",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_v59jxw9m",
+"name": "Trulieve - Tempe",
+"latitude": "33.44573548",
+"longitude": "-111.92271834",
+"full_address": "1525 N Scottsdale Rd, Tempe, AZ 85281",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_qxmpeyny",
+"name": "Trulieve - Tucson (6th Ave)",
+"latitude": "32.22215000",
+"longitude": "-110.96860000",
+"full_address": "1 S 6th Ave, Tucson, AZ 85701",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_v59jxw7m",
+"name": "Trulieve - Tucson (Oracle)",
+"latitude": "32.29175291",
+"longitude": "-110.97911818",
+"full_address": "4695 N Oracle Rd, Tucson, AZ 85705",
+"website": "https://www.trulieve.com/dispensaries/arizona",
+"phone": null
+},
+{
+"id": "loc_xgqx72w6",
+"name": "Trulieve Apache Junction",
+"latitude": "33.41465475",
+"longitude": "-111.56751828",
+"full_address": "1985 W Apache Trail, Apache Junction, AZ 85120",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 582-8521"
+},
+{
+"id": "loc_5zw2mevn",
+"name": "Trulieve Avondale",
+"latitude": "33.41085474",
+"longitude": "-112.34011841",
+"full_address": "3828 S Vemeersch Rd, Avondale, AZ 85323",
+"website": "https://www.trulieve.com/",
+"phone": "(623) 792-5032"
+},
+{
+"id": "loc_nxmvwzn5",
+"name": "Trulieve Casa Grande",
+"latitude": "32.88107800",
+"longitude": "-111.70723500",
+"full_address": "1860 N Salk Dr, Casa Grande, AZ 85122",
+"website": "https://www.trulieve.com/",
+"phone": "(520) 350-9880"
+},
+{
+"id": "loc_9yrx9wey",
+"name": "Trulieve Chandler",
+"latitude": "33.30615457",
+"longitude": "-111.79271832",
+"full_address": "13433 E Chandler Blvd, Chandler, AZ 85225",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 439-7771"
+},
+{
+"id": "loc_p7my28yk",
+"name": "Trulieve Cottonwood",
+"latitude": "34.72165689",
+"longitude": "-112.00041835",
+"full_address": "2400 AZ-89A, Cottonwood, AZ 86326",
+"website": "https://www.trulieve.com/",
+"phone": "(928) 634-5233"
+},
+{
+"id": "loc_eqyvm6gv",
+"name": "Trulieve Glendale",
+"latitude": "33.60927100",
+"longitude": "-112.18545400",
+"full_address": "13631 N 59th Ave, Glendale, AZ 85304",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 531-1172"
+},
+{
+"id": "loc_z7pjvnjw",
+"name": "Trulieve Guadalupe",
+"latitude": "33.37754686",
+"longitude": "-111.96618345",
+"full_address": "1821 W Baseline Rd, Guadalupe, AZ 85283",
+"website": "https://www.trulieve.com/",
+"phone": "(623) 404-1420"
+},
+{
+"id": "loc_7v2r85eq",
+"name": "Trulieve Menlo Park",
+"latitude": "32.20905277",
+"longitude": "-110.98061818",
+"full_address": "1010 South Freeway #130, Tucson, AZ 85745",
+"website": "https://www.trulieve.com/",
+"phone": "(520) 640-4402"
+},
+{
+"id": "loc_gpwyz9w7",
+"name": "Trulieve North Mesa",
+"latitude": "33.44435480",
+"longitude": "-111.85581833",
+"full_address": "1150 W McLellan Rd, Mesa, AZ 85201",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 561-0388"
+},
+{
+"id": "loc_eqyvm6kv",
+"name": "Trulieve On Swan",
+"latitude": "32.20745277",
+"longitude": "-110.89271817",
+"full_address": "4659 E 22nd St, Tucson, AZ 85711",
+"website": "https://www.trulieve.com/",
+"phone": "(520) 640-4600"
+},
+{
+"id": "loc_7v2r85pq",
+"name": "Trulieve Peoria",
+"latitude": "33.58035502",
+"longitude": "-112.25761839",
+"full_address": "9275 W Peoria Ave, Peoria, AZ 85345",
+"website": "https://www.trulieve.com/",
+"phone": "(623) 878-5954"
+},
+{
+"id": "loc_9yrx9wjy",
+"name": "Trulieve Phoenix Alhambra",
+"latitude": "33.49545488",
+"longitude": "-112.11561837",
+"full_address": "2630 W Indian School Rd, Phoenix, AZ 85017",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 209-1804"
+},
+{
+"id": "loc_wgv8znwx",
+"name": "Trulieve Phoenix North Mountain",
+"latitude": "33.58165502",
+"longitude": "-112.10241837",
+"full_address": "2017 W Peoria Ave, Phoenix, AZ 85029",
+"website": "https://www.trulieve.com/",
+"phone": "(602) 641-3671"
+},
+{
+"id": "loc_mgx9p8yv",
+"name": "Trulieve Phoenix Roosevelt Row",
+"latitude": "33.45895482",
+"longitude": "-112.06471836",
+"full_address": "1007 N 7th St, Phoenix, AZ 85006",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 851-6184"
+},
+{
+"id": "loc_eqyvm6vv",
+"name": "Trulieve Phoenix Tatum",
+"latitude": "33.63815511",
+"longitude": "-111.97731835",
+"full_address": "16635 N. Tatum Boulevard, Phoenix, AZ 85032",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 440-5839"
+},
+{
+"id": "loc_2nq8jrq9",
+"name": "Trulieve Scottsdale",
+"latitude": "33.62405509",
+"longitude": "-111.90371833",
+"full_address": "15190 N Hayden Rd, Scottsdale, AZ 85260",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 948-3737"
+},
+{
+"id": "loc_qxmpeymy",
+"name": "Trulieve Scottsdale Butherus",
+"latitude": "33.62335509",
+"longitude": "-111.92161834",
+"full_address": "7320 E Butherus Dr Suite 100, Scottsdale, AZ 85260",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 575-1245"
+},
+{
+"id": "loc_z7pjvnyw",
+"name": "Trulieve Sierra Vista",
+"latitude": "31.53875167",
+"longitude": "-110.25618064",
+"full_address": "1633 AZ-92, Sierra Vista, AZ 85635",
+"website": "https://www.trulieve.com/",
+"phone": "(520) 678-1405"
+},
+{
+"id": "loc_8ger75e6",
+"name": "Trulieve South Mesa",
+"latitude": "33.38255469",
+"longitude": "-111.81091832",
+"full_address": "938 E Juanita Ave, Mesa, AZ 85204",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 272-9888"
+},
+{
+"id": "loc_8ger75r6",
+"name": "Trulieve Tempe",
+"latitude": "33.34953300",
+"longitude": "-111.94750600",
+"full_address": "710 W Elliot Rd, Tempe, AZ 85284",
+"website": "https://www.trulieve.com/",
+"phone": "(480) 777-2100"
+},
+{
+"id": "loc_nxmvwzy5",
+"name": "TrulieveTucson",
+"latitude": "32.25005284",
+"longitude": "-110.93151818",
+"full_address": "2734 E Grant Rd, Tucson, AZ 85716",
+"website": "https://www.trulieve.com/",
+"phone": "(520) 314-9420"
+},
+{
+"id": "loc_wgv8zn8x",
+"name": "Trumed",
+"latitude": "33.46625483",
+"longitude": "-111.99521835",
+"full_address": "1613 N 40th St, Phoenix, AZ 85008",
+"website": "https://trumedaz.com/",
+"phone": "(602) 275-1279"
 },
 {
 "id": "loc_gpwyzpk7",
@@ -5812,5 +6928,68 @@
 "full_address": "2201 Northgate Blvd suite h, Sacramento, CA 95833",
 "website": "https://www.zen916.com/home",
 "phone": "(916) 565-1692"
+},
+{
+"id": "loc_qxmpeypy",
+"name": "Zen Leaf Arcadia",
+"latitude": "33.49535488",
+"longitude": "-112.02291835",
+"full_address": "2710 E Indian School Rd., Phoenix, AZ 85016",
+"website": "https://zenleafdispensaries.com/locations/arcadia/",
+"phone": "(602) 960-2273"
+},
+{
+"id": "loc_xgqx72x6",
+"name": "Zen Leaf Chandler",
+"latitude": "33.30605457",
+"longitude": "-111.96621834",
+"full_address": "7200 W Chandler Blvd, Chandler, AZ 85226",
+"website": "https://zenleafdispensaries.com/locations/chandler/?utm_source=google&utm_medium=gbp&utm_campaign=az-chandler",
+"phone": "(602) 960-2273"
+},
+{
+"id": "loc_2nq8jrv9",
+"name": "Zen Leaf Gilbert",
+"latitude": "33.31795459",
+"longitude": "-111.68581830",
+"full_address": "5409 South Power Rd, Mesa, AZ 85212",
+"website": "https://zenleafdispensaries.com/locations/gilbert/menu",
+"phone": "(602) 960-2273"
+},
+{
+"id": "loc_mgx9p8xv",
+"name": "Zen Leaf Mesa",
+"latitude": "33.45223548",
+"longitude": "-111.84329183",
+"full_address": "550 W Mckellips Rd, Mesa, AZ 85201-1213",
+"website": "https://zenleafdispensaries.com/locations/mesa/menu",
+"phone": "(602) 960-2273"
+},
+{
+"id": "loc_8ger75n6",
+"name": "Zen Leaf Phoenix - Cave Creek",
+"latitude": "33.59885505",
+"longitude": "-112.03671836",
+"full_address": "12401 N Cave Creek Rd., Phoenix, AZ 85022",
+"website": "https://zenleafdispensaries.com/locations/phoenix-n-cave-creek/menu",
+"phone": "(602) 960-2273"
+},
+{
+"id": "loc_mgx9p85v",
+"name": "Zen Leaf Phoenix - Dunlap",
+"latitude": "33.56795500",
+"longitude": "-112.15071837",
+"full_address": "4244 W Dunlap Avenue, Phoenix, AZ 85051",
+"website": "https://zenleafdispensaries.com/locations/phoenix-w-dunlap/",
+"phone": "(602) 960-2273"
+},
+{
+"id": "loc_eqyvm6ev",
+"name": "truBLISS",
+"latitude": "33.33915462",
+"longitude": "-111.68561830",
+"full_address": "6844 E Parkway Norte, Mesa, AZ 85212-3605",
+"website": "https://trubliss.com/",
+"phone": "(480) 325-5000"
 }
 ]

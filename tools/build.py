@@ -136,6 +136,7 @@ def main():
         strip = lambda p: {k: v for k, v in p.items() if k not in ('sheet', 'column')}
         data = {
             'month': ym, 'title': mon['title'], 'months': months,
+            'state': 'ca', 'stateName': 'California', 'states': promos.get('states', []),
             'brand': promos['brand'], 'lede': promos['lede'], 'finePrint': promos['finePrint'],
             'dated': [strip(p) for p in mon['dated']], 'weekly': [strip(p) for p in mon['weekly']],
             'shops': out_shops,

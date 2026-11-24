@@ -1,0 +1,240 @@
+{
+  "_readme": "Maps each retailer name on the Arizona programming sheet to its stores. 'match' = regexes tested against Arizona store names in data/locator.json (every matching location is listed). 'locations' = stores the locator doesn't have. 'url' = website for retailers with no locator store. 'rename' cleans up locator store names.",
+  "retailers": {
+    "Arizona Cannabis Society Inc": {
+      "match": [
+        "^Arizona Cannabis Society"
+      ]
+    },
+    "Botanica": {
+      "match": [
+        "^Botanica"
+      ]
+    },
+    "Cookies": {
+      "match": [
+        "^Cookies"
+      ]
+    },
+    "Curaleaf": {
+      "match": [
+        "^Cur[ae]leaf"
+      ]
+    },
+    "D2 Dispensaries": {
+      "match": [
+        "^D2 Dispensary"
+      ]
+    },
+    "Deeply Rooted": {
+      "match": [
+        "^Deeply Rooted"
+      ]
+    },
+    "Earth Healing": {
+      "match": [
+        "^Earth'?s Healing"
+      ]
+    },
+    "Farm Fresh": {
+      "locations": [
+        {
+          "name": "Farm Fresh (Lake Havasu City)",
+          "address": "790 N Lake Havasu Ave, Lake Havasu City, AZ 86403",
+          "url": "https://thefarmaz.com/",
+          "lat": 34.49759,
+          "lng": -114.34785
+        }
+      ]
+    },
+    "Greenpharms": {
+      "match": [
+        "^Green ?Pharms"
+      ]
+    },
+    "Health For Life Crimson": {
+      "match": [
+        "^Health for Life"
+      ]
+    },
+    "JARS": {
+      "match": [
+        "^JARS\\b"
+      ]
+    },
+    "Kind Meds": {
+      "match": [
+        "^Kind Meds"
+      ]
+    },
+    "Nature Med Tucson": {
+      "match": [
+        "^Nature Med"
+      ]
+    },
+    "Natures Wonder": {
+      "match": [
+        "^Nature'?s Wonder"
+      ]
+    },
+    "Nirvana": {
+      "match": [
+        "^Nirvana"
+      ]
+    },
+    "Phoenix Cannabis Co": {
+      "locations": [
+        {
+          "name": "Phoenix Cannabis Co. (Fountain Hills)",
+          "address": "16913 E Enterprise Dr, Fountain Hills, AZ 85268",
+          "url": "https://phoenixcannabisco.com/",
+          "lat": 33.59661,
+          "lng": -111.71489
+        }
+      ]
+    },
+    "Ponderosa": {
+      "locations": [
+        {
+          "name": "JARS North Mesa (formerly Ponderosa)",
+          "address": "5550 E McDowell Rd, Mesa, AZ 85215",
+          "url": "https://jarscannabis.com/az/north-mesa",
+          "lat": 33.46639,
+          "lng": -111.7109
+        },
+        {
+          "name": "JARS Tempe (formerly Ponderosa)",
+          "address": "1911 W Broadway Rd, Mesa, AZ 85202",
+          "url": "https://jarscannabis.com/az/tempe",
+          "lat": 33.40754,
+          "lng": -111.87296
+        },
+        {
+          "name": "JARS Queen Creek (formerly Ponderosa)",
+          "address": "7343 S 89th Pl, Mesa, AZ 85212",
+          "url": "https://jarscannabis.com/az/queen-creek",
+          "lat": 33.28318,
+          "lng": -111.63989
+        },
+        {
+          "name": "JARS Desert Ridge (formerly Ponderosa)",
+          "address": "21035 N Cave Creek Rd, Suite C3-4, Phoenix, AZ 85024",
+          "url": "https://jarscannabis.com/az/desert-ridge",
+          "lat": 33.67833,
+          "lng": -112.031
+        },
+        {
+          "name": "JARS Chandler (formerly Ponderosa)",
+          "address": "318 S Bracken Ln, Chandler, AZ 85224",
+          "url": "https://jarscannabis.com/az/chandler",
+          "lat": 33.29806,
+          "lng": -111.89052
+        },
+        {
+          "name": "JARS Glendale (formerly Ponderosa)",
+          "address": "9240 W Northern Ave, Ste 103b, Glendale, AZ 85305",
+          "url": "https://jarscannabis.com/az/glendale",
+          "lat": 33.55173,
+          "lng": -112.25803
+        },
+        {
+          "name": "JARS Flagstaff (formerly Ponderosa)",
+          "address": "1250 S Plaza Way, Suite A, Flagstaff, AZ 86001",
+          "url": "https://jarscannabis.com/az/flagstaff",
+          "lat": 35.18829,
+          "lng": -111.66297
+        },
+        {
+          "name": "JARS North Tucson (formerly Ponderosa)",
+          "address": "3008 N Stone Ave, Tucson, AZ 85705",
+          "url": "https://jarscannabis.com/az/north-tucson",
+          "lat": 32.26142,
+          "lng": -110.97194
+        }
+      ]
+    },
+    "Sticky Saguaro": {
+      "match": [
+        "^Sticky Saguaro"
+      ]
+    },
+    "Superior Dispensary": {
+      "locations": [
+        {
+          "name": "The Superior Dispensary",
+          "address": "211 S 57th Dr, Phoenix, AZ 85043",
+          "url": "https://thesuperiordispensary.com/phoenix-az/",
+          "lat": 33.44609,
+          "lng": -112.18305
+        }
+      ]
+    },
+    "The Flower Shop": {
+      "match": [
+        "^The Flower Shop"
+      ]
+    },
+    "The Good": {
+      "match": [
+        "^The Good Dispensary"
+      ]
+    },
+    "The Mint": {
+      "match": [
+        "^The Mint\\b"
+      ]
+    },
+    "The Prime Leaf": {
+      "match": [
+        "^The Prime Leaf"
+      ]
+    },
+    "TruBliss": {
+      "match": [
+        "^truBLISS"
+      ]
+    },
+    "TruMed": {
+      "match": [
+        "^Trumed"
+      ]
+    },
+    "Valley Of The Sun": {
+      "locations": [
+        {
+          "name": "Valley of the Sun Dispensary (Goodyear)",
+          "address": "16200 W Eddie Albert Way, Goodyear, AZ 85338",
+          "url": "https://www.votsmd.com/visit"
+        }
+      ]
+    },
+    "Zen Leaf": {
+      "match": [
+        "^Zen Leaf"
+      ]
+    },
+    "Sol Flower": {
+      "match": [
+        "^Sol Flower"
+      ]
+    },
+    "Trulieve": {
+      "match": [
+        "^Trulieve"
+      ]
+    }
+  },
+  "rename": {
+    "Cookies - Tempe - Tempe - 2715 South Hardy Drive": "Cookies Tempe",
+    "D2 Dispensary Cannabis Destination + Drive Thru - Medical": "D2 Dispensary – Cannabis Destination (Medical)",
+    "D2 Dispensary Downtown Cannabis Gallery - Medical": "D2 Dispensary – Downtown Cannabis Gallery (Medical)",
+    "Deeply Rooted Boutique Cannabis Company": "Deeply Rooted",
+    "TrulieveTucson": "Trulieve Tucson",
+    "truBLISS": "TruBliss",
+    "Trumed": "TruMed",
+    "Nature's Wonder Dispensary - Phoenix - REC": "Nature's Wonder – Phoenix"
+  },
+  "city": {
+    "JARS - New River": "New River"
+  }
+}

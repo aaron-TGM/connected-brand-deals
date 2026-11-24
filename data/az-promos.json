@@ -1,0 +1,67 @@
+{
+  "_readme": "Arizona promo copy. Each sheet row is matched by the start of its 'Promotion' text ('match'). Dates and retailers come from the sheet. {brand} becomes the brand name. Deals are brand products only.",
+  "year": 2026,
+  "brand": {
+    "kicker": "Connected Cannabis Co. · Arizona retail deals",
+    "timeZone": "America/Phoenix"
+  },
+  "lede": "{brand} deals running at Arizona dispensaries. Pick your shop to see what it's running, then head there to shop.",
+  "promos": [
+    {
+      "match": "50% off all products",
+      "id": "gwbf",
+      "name": "Green Wednesday → Black Friday",
+      "short": "Green Wed → Black Fri",
+      "pct": "50%",
+      "what": "off all {brand} products",
+      "head": "50% off",
+      "tag": "50% off",
+      "color": "#1A98CE",
+      "feature": true
+    },
+    {
+      "match": "Buy one, get one 90% off",
+      "id": "bogo90",
+      "name": "Zen Leaf",
+      "short": "at Zen Leaf",
+      "pct": "BOGO",
+      "line": "Buy one, get one 90% off {brand} products",
+      "head": "BOGO 90%",
+      "tag": "BOGO 90% off",
+      "color": "#1A98CE"
+    },
+    {
+      "match": "Buy one, get one free",
+      "id": "bogo",
+      "name": "Sol Flower",
+      "short": "at Sol Flower",
+      "pct": "BOGO",
+      "line": "Buy one, get one free on {brand} products",
+      "head": "BOGO",
+      "tag": "BOGO free",
+      "color": "#1A98CE"
+    },
+    {
+      "match": "Green Wednesday flower deals",
+      "id": "gwflower",
+      "name": "Trulieve Green Wednesday",
+      "short": "at Trulieve",
+      "pct": "$30",
+      "line": "{brand} 3.5g, 3.7g or 4.5g flower for $30 each or 4 for $100, mix and match. Prepacked 14g flower for $70 each or 2 for $120.",
+      "head": "$30 flower",
+      "tag": "$30 flower",
+      "color": "#1A98CE"
+    },
+    {
+      "match": "50% off storewide",
+      "id": "bf50",
+      "name": "Trulieve Black Friday",
+      "short": "at Trulieve",
+      "pct": "50%",
+      "what": "off all {brand} products",
+      "head": "50% off",
+      "tag": "50% off",
+      "color": "#1A98CE"
+    }
+  ]
+}
